@@ -18,8 +18,16 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    /* path aliases */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@language/*": ["src/locale/*"]
+    }
   },
-  "include": ["src"],
+  "include": ["src", "../i18n.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
