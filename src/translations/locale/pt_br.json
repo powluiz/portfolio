@@ -7,27 +7,32 @@
   },
 
   "home": {
-    "Hi, I'm Luiz:": "Olá, eu sou o Luiz:",
-    "Frontend Developer.": "Desenvolvedor Frontend.",
-    "UX/UI Designer.": "UX/UI Designer.",
+    "Hi, I'm Luiz:": "Oi! Eu sou o Luiz:",
+    "Frontend Developer": "Dev Frontend",
+    "UX/UI Designer": "UX/UI Designer",
     "Graphic Designer": "Designer Gráfico",
     "Video Editor": "Editor de Vídeo",
-    "phrase": "Meu trabalho é transformar ideias em experiências significativas.",
+    "My job is to turn": "Meu trabalho é transformar ",
+    "ideas": "ideias ",
+    "into": "em ",
+    "meaningful experiences": "experiências significativas.",
     "About me": "Sobre mim",
     "Get in touch": "Entre em contato"
   },
 
   "skills": {
-    "Development": "Development",
+    "Skills": "Habilidades",
+
+    "Development": "Desenvolvimento",
     "DevelopText": "BR - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
 
     "UX/UI Design": "UX/UI Design",
     "UXDesignText": "BR - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
 
-    "Experience": "Experience",
-    "ExperienceText": "BR - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    "Design": "Design Gráfico",
+    "DesignText": "BR - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
 
-    "Video Editing": "Video Editing",
+    "Video Editing": "Edição de Vídeo",
     "VideoEditText": "BR - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
   },
 

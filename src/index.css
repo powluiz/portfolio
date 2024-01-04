@@ -1,3 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  * {
+    letter-spacing: -0.03em;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  .content-wrapper {
+    display: flex;
+    padding: 6rem 4.75rem;
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+
+  @media only screen and (max-width: 976px) {
+    .content-wrapper {
+      padding: 4rem 2rem;
+    }
+  }
+}
+
+.home-gradient {
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    190deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(229, 219, 255, 1) 100%
+  );
+}

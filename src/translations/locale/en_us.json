@@ -1,31 +1,36 @@
 {
   "navbar": {
-    "Home": "Home-in-english",
+    "Home": "Home",
     "Skills": "Skills",
     "Experience": "Experience",
     "Contact": "Contact"
   },
 
   "home": {
-    "Hi, I'm Luiz:": "Hi, I'm Luiz:",
-    "Frontend Developer.": "Frontend Developer.",
-    "UX/UI Designer.": "UX/UI Designer.",
+    "Hi, I'm Luiz:": "Hi! I'm Luiz:",
+    "Frontend Developer": "Frontend Developer",
+    "UX/UI Designer": "UX/UI Designer",
     "Graphic Designer": "Graphic Designer",
     "Video Editor": "Video Editor",
-    "phrase": "My job is to turn ideas into meaningful experiences.",
+    "My job is to turn": "My job is to turn ",
+    "ideas": "ideas ",
+    "into": "into ",
+    "meaningful experiences": "meaningful experiences.",
     "About me": "About me",
     "Get in touch": "Get in touch"
   },
 
   "skills": {
+    "Skills": "Skills",
+
     "Development": "Development",
     "DevelopText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
 
     "UX/UI Design": "UX/UI Design",
     "UXDesignText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
 
-    "Experience": "Experience",
-    "ExperienceText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    "Design": "Graphic Design",
+    "DesignText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
 
     "Video Editing": "Video Editing",
     "VideoEditText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."

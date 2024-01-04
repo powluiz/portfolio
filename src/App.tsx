@@ -1,32 +1,11 @@
-import { useTranslation } from 'react-i18next'
-import { NavBar } from './components'
+import { Home, Skills } from './components'
 
 function App() {
-  const [t] = useTranslation('navbar')
   return (
-    <>
-      <NavBar
-        showLangSelector
-        links={[
-          {
-            label: t('Home'),
-            to: '#',
-          },
-          {
-            label: t('Skills'),
-            to: '#',
-          },
-          {
-            label: t('Experience'),
-            to: '#',
-          },
-          {
-            label: t('Contact'),
-            to: '#',
-          },
-        ]}
-      />
-    </>
+    <div>
+      <Home />
+      <Skills />
+    </div>
   )
 }
 

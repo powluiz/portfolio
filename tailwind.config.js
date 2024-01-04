@@ -1,6 +1,13 @@
 /** @type {import('tailwindcss').Config} */
 
-const themeColors = {
+export const breakpoints = {
+  sm: '480px',
+  md: '768px',
+  lg: '976px',
+  xl: '1440px',
+}
+
+export const themeColors = {
   primary: {
     low: '#0F172A',
     dark: '#7547FF',
@@ -33,17 +40,13 @@ const themeColors = {
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    screens: {
-      sm: '480px',
-      md: '768px',
-      lg: '976px',
-      xl: '1440px',
-    },
-    colors: {
-      ...themeColors,
-    },
-    fontFamily: {
-      sans: ['geist', 'system-ui', 'sans-serif'],
+    screens: { ...breakpoints },
+    colors: { ...themeColors },
+    fontFamily: { sans: ['geist', 'system-ui', 'sans-serif'] },
+    extend: {
+      backgroundImage: {
+        noise: 'url("./src/assets/noise.png")',
+      },
     },
   },
   plugins: [],

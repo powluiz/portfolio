@@ -2,28 +2,29 @@ import { INavbarProps } from './types'
 import LanguageSelector from './parts/LanguageSelector'
 import { Icon } from '..'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { pageLinks } from '@/utils/constants'
+import { useTranslation } from 'react-i18next'
 
-const NavBar = ({ links, showLangSelector = false }: INavbarProps) => {
+const NavBar = ({ showLangSelector = false }: INavbarProps) => {
+  const { t } = useTranslation('navbar')
+
   return (
-    <nav className="bg-neutral-white flex w-full select-none items-center justify-between px-12 py-10 shadow-md lg:px-20 lg:py-16">
-      <div className="relative font-black">
-        <h1 className="text-primary-dark text-2xl">{`<Luiz />`}</h1>
-      </div>
+    <nav className="absolute top-0 z-50 flex h-fit w-full select-none items-center justify-between bg-neutral-transparent px-8 py-10 lg:px-20 lg:py-16">
+      {/* <h1 className="min-w-fit text-2xl font-black text-primary-dark">{`Luiz`}</h1> */}
       <div className="flex-no-shrink hidden items-center justify-center md:flex md:gap-6 lg:gap-11">
-        {links?.map(link => (
+        {pageLinks?.map(link => (
           <a
-            key={`link-${link.label}`}
-            href="#"
-            className="flex-no-grow flex-no-shrink hover:bg-grey-dark relative flex items-center px-4 py-2 leading-normal text-white no-underline transition-all duration-300 ease-in-out hover:font-medium"
+            key={`link-${link?.label}`}
+            href={link?.to}
+            className="flex-no-grow flex-no-shrink hover:bg-grey-dark text-white relative flex items-center px-4 py-2 leading-normal no-underline transition-all duration-300 ease-in-out hover:font-medium"
           >
-            {link.label}
+            {t(link?.label)}
           </a>
         ))}
-
-        {showLangSelector && <LanguageSelector />}
       </div>
+      {showLangSelector && <LanguageSelector />}
 
-      <div className="hover:bg-neutral-high flex h-10 w-10 cursor-pointer items-center justify-center rounded-full transition-all duration-300 ease-in-out md:hidden">
+      <div className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full transition-all duration-300 ease-in-out hover:bg-neutral-high md:hidden">
         <Icon icon={faBars} size="lg" />
       </div>
     </nav>
