@@ -19,18 +19,18 @@ const Home = () => {
                 key={`link-${link?.url}`}
                 href={link?.url}
                 target="_blank"
-                className="transition duration-150 ease-in-out hover:brightness-[0.83]"
+                className="hover:animate-wiggle transition duration-150 ease-in-out hover:brightness-[0.83]"
               >
                 {link?.icon}
               </a>
             ))}
           </div>
           <div className="flex min-w-fit flex-col gap-1 ">
-            <h1 className="text-nowrap text-4xl font-extrabold text-primary-low sm:text-6xl">
+            <h1 className="text-nowrap text-4xl font-extrabold text-primary-low md:text-6xl">
               {t("Hi, I'm Luiz:")}
             </h1>
             <div className="flex">
-              <h1 className="text-nowrap text-4xl font-extrabold text-primary-dark sm:text-6xl">
+              <h1 className="text-nowrap text-4xl font-extrabold text-primary-dark md:text-6xl">
                 {t('Frontend Developer')}
               </h1>
             </div>
@@ -59,9 +59,9 @@ const Home = () => {
 
         {/* right part */}
         <div className="relative hidden h-full w-full items-center justify-center lg:flex">
-          <DotPattern className="z=[-1] absolute -translate-y-24 translate-x-24 opacity-80" />
-          <DotPattern className="z=[-1] absolute -translate-x-24 translate-y-24 opacity-85" />
-          <div className="aspect-square w-40 flex-shrink-0 overflow-hidden rounded-full bg-neutral-dark drop-shadow-md hover:brightness-105 lg:w-72">
+          <DotPattern className="animate-wiggle-pos absolute right-[3rem] top-[6rem] z-[1] opacity-30 md:opacity-45" />
+          <DotPattern className="animate-wiggle-pos absolute bottom-[5rem] left-[3rem] z-[1] opacity-30 md:opacity-45" />
+          <div className="z-10 aspect-square w-40 flex-shrink-0 overflow-hidden rounded-full bg-neutral-dark drop-shadow-md hover:brightness-105 lg:w-72">
             <img
               src={picture}
               className="h-full w-full object-cover"
@@ -70,7 +70,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      {/* <div className="bg-noise absolute z-[-9] h-full w-full opacity-50" /> */}
+      {/* <div className="absolute z-[-9] h-full w-full bg-noise opacity-50" /> */}
       {/* <div className="home-gradient absolute z-[-10] h-full w-full" /> */}
     </div>
   )

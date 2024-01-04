@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
+const colors = require('tailwindcss/colors')
+
 export const breakpoints = {
   sm: '480px',
   md: '768px',
@@ -41,11 +43,29 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     screens: { ...breakpoints },
-    colors: { ...themeColors },
+    colors: { ...colors, ...themeColors },
     fontFamily: { sans: ['geist', 'system-ui', 'sans-serif'] },
     extend: {
       backgroundImage: {
         noise: 'url("./src/assets/noise.png")',
+      },
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
+        wiggle: 'wiggle 1s ease-in-out infinite',
+        'wiggle-slow': 'wiggle 6s ease-in-out infinite',
+        'wiggle-pos': 'wiggle-pos 7s ease-in-out infinite',
+      },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-7deg)' },
+          '50%': { transform: 'rotate(7deg)' },
+        },
+        'wiggle-pos': {
+          '0%, 100%': { transform: 'translate(-2%,-2%)' },
+          '25%': { transform: 'translate(2%,2%)' },
+          '50%': { transform: 'translate(-2%,2%)' },
+          '75%': { transform: 'translate(2%,-2%)' },
+        },
       },
     },
   },

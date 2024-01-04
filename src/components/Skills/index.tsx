@@ -15,7 +15,7 @@ const TextBlock = ({ title, text, align = 'start' }: ITextBlockProps) => (
       {title}
     </h2>
     <p
-      className={`text h-fit w-full text-center text-base font-light leading-tight text-neutral-base md:text-${align} sm:text-lg lg:text-xl`}
+      className={`h-fit w-full text-center text-base font-light leading-tight text-neutral-base md:text-${align} sm:text-lg lg:text-xl`}
     >
       {text}
     </p>
@@ -26,16 +26,13 @@ const Skills = () => {
   const { t } = useTranslation('skills')
 
   return (
-    <div
-      id="section-skills"
-      className="relative flex h-screen flex-col bg-primary-low"
-    >
-      <div className="content-wrapper flex h-full w-full flex-col gap-10 lg:gap-16">
+    <div id="section-skills" className="section-wrapper bg-primary-low">
+      <div className="content-wrapper flex h-full min-h-fit w-full flex-col gap-10 lg:gap-16">
         <h1 className="z-10 h-fit w-full text-center text-[2.5rem] font-extrabold text-neutral-white sm:text-5xl md:text-6xl">
           {t('Skills')}
         </h1>
 
-        <div className="z-10 grid grid-cols-1 gap-x-16 gap-y-8 md:grid-cols-2 md:gap-y-16">
+        <div className="z-10 grid min-h-fit grid-cols-1 gap-x-16 gap-y-8 md:grid-cols-2 md:gap-y-16">
           <TextBlock
             title={t('Development')}
             text={t('DevelopText')}
@@ -58,8 +55,8 @@ const Skills = () => {
           />
         </div>
       </div>
-      <DotPattern className="absolute z-0 -translate-y-24 translate-x-24 opacity-40" />
-      <DotPattern className="absolute bottom-[3.5rem] right-[-1rem] z-0 opacity-40" />
+      <DotPattern className="animate-wiggle-pos absolute left-[4.5rem] top-[-6rem] z-[1] opacity-30 md:opacity-45" />
+      <DotPattern className="animate-wiggle-pos absolute bottom-[-6rem] right-[2rem] z-[1] opacity-20 md:opacity-45" />
     </div>
   )
 }
