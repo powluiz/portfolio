@@ -19,7 +19,7 @@ const Home = () => {
                 key={`link-${link?.url}`}
                 href={link?.url}
                 target="_blank"
-                className="hover:animate-wiggle transition duration-150 ease-in-out hover:brightness-[0.83]"
+                className="transition duration-150 ease-in-out hover:animate-wiggle hover:brightness-[0.83]"
               >
                 {link?.icon}
               </a>
@@ -59,8 +59,8 @@ const Home = () => {
 
         {/* right part */}
         <div className="relative hidden h-full w-full items-center justify-center lg:flex">
-          <DotPattern className="animate-wiggle-pos absolute right-[3rem] top-[6rem] z-[1] opacity-30 md:opacity-45" />
-          <DotPattern className="animate-wiggle-pos absolute bottom-[5rem] left-[3rem] z-[1] opacity-30 md:opacity-45" />
+          <DotPattern className="absolute right-[3rem] top-[6rem] z-[1] animate-wiggle-pos opacity-30 md:opacity-45" />
+          <DotPattern className="absolute bottom-[5rem] left-[3rem] z-[1] animate-wiggle-pos opacity-30 md:opacity-45" />
           <div className="z-10 aspect-square w-40 flex-shrink-0 overflow-hidden rounded-full bg-neutral-dark drop-shadow-md hover:brightness-105 lg:w-72">
             <img
               src={picture}
