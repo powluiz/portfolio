@@ -1,7 +1,9 @@
 {
   "navbar": {
     "Home": "Início",
+    "About": "Sobre",
     "Skills": "Habilidades",
+    "Projects": "Projetos",
     "Experience": "Experiência",
     "Contact": "Contato"
   },
@@ -47,5 +49,30 @@
   "projects": {
     "Projects": "Projetos",
     "ProjectsText": "Confira alguns projetos que já trabalhei."
+  },
+
+  "experience": {
+    "Experience": "Experiência",
+    "ExperienceText": "Role para ver experiências anteriores.",
+    "PRESENT": "PRESENTE",
+
+    "NEES": "Centro de Excelência em Tecnologias Sociais",
+    "Role": "Engenheiro de Software Frontend",
+    "Description": "BR - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+  },
+
+  "contact": {
+    "Contact": "Me envie uma mensagem!",
+    "ContactText": "Possui uma dúvida, proposta ou só quer dizer um olá? Fique livre para entrar em contato!",
+
+    "NameLabel": "Seu Nome",
+    "NamePlaceholder": "Insira seu nome",
+
+    "EmailLabel": "Endereço de Email",
+    "EmailPlaceholder": "Insira seu endereço de email",
+
+    "MessageLabel": "Sua Mensagem",
+    "MessagePlaceholder": "O seu perfil me chamou a atenção e estou interessado em discutir uma possível oportunidade de colaboração. Você está disponível para uma breve conversa?",
+    "submit": "Enviar"
   }
 }

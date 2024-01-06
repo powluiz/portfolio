@@ -3,12 +3,35 @@ import { Button, NavBar } from '..'
 import { socialLinks } from '@/utils/constants'
 import picture from '@/assets/me.jpg'
 import DotPattern from '@/assets/DotPattern'
+import gsap from 'gsap'
+import { useLayoutEffect, useRef } from 'react'
 
 const Home = () => {
   const { t } = useTranslation('home')
 
+  const ctxWrapper = useRef(null)
+  const tl = gsap.timeline({
+    defaults: {
+      y: 32,
+      opacity: 0,
+    },
+    delay: 0.5,
+  })
+
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      tl.from('.social-icon', {
+        duration: 1,
+        stagger: 0.1,
+        ease: 'elastic.out(0.75,0.65)',
+      })
+    }, ctxWrapper)
+
+    return () => ctx.revert()
+  }, [])
+
   return (
-    <div id="section-home" className="flex h-screen flex-col">
+    <div id="section-home" ref={ctxWrapper} className="flex h-screen flex-col">
       <NavBar showLangSelector />
       <div className="content-wrapper flex h-full w-full flex-col-reverse gap-8 lg:flex-row lg:justify-between">
         {/* left part */}
@@ -19,7 +42,7 @@ const Home = () => {
                 key={`link-${link?.url}`}
                 href={link?.url}
                 target="_blank"
-                className="transition duration-150 ease-in-out hover:animate-wiggle hover:brightness-[0.83]"
+                className="social-icon hover:-translate-y-1 hover:brightness-[0.83]"
               >
                 {link?.icon}
               </a>
@@ -70,8 +93,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      {/* <div className="absolute z-[-9] h-full w-full bg-noise opacity-50" /> */}
-      {/* <div className="home-gradient absolute z-[-10] h-full w-full" /> */}
+      <div className="home-gradient absolute z-[-10] h-full w-full opacity-85" />
     </div>
   )
 }

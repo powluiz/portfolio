@@ -5,47 +5,37 @@ import { useLayoutEffect, useRef } from 'react'
 
 const Logo = () => {
   const ctxWrapper = useRef(null)
-  const classList = ['logo_chevron', 'logo_L', 'logo_U', 'logo_I', 'logo_Z']
-  const delay = 0.5
+  const tl = gsap.timeline({
+    defaults: {
+      y: 16,
+      opacity: 0,
+    },
+  })
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      classList?.map(classItem => {
-        gsap.from(`.${classItem}`, {
-          y: 16,
-          duration: 1,
-          ease: 'back.out',
-          delay: delay,
-        })
-
-        gsap.from(`.${classItem}`, {
-          opacity: 0,
-          duration: 1.25,
-          delay: delay,
-          ease: 'back.out',
-        })
-      })
+      tl.from('.logo_chevron', {
+        delay: 0.5,
+        duration: 1,
+        ease: 'power4.out',
+      }).from(
+        '.letter',
+        { duration: 1, stagger: 0.05, ease: 'elastic.out(0.75,0.65)' },
+        '-=0.5',
+      )
     }, ctxWrapper)
 
     return () => ctx.revert()
   }, [])
 
-  // const onEnter = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-  //   gsap.to(e.target, { scale: 1.2 })
-  // }
-
-  // const onLeave = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-  //   gsap.to(e.target, { scale: 1 })
-  // }
-
   return (
     <div ref={ctxWrapper} className="flex items-center justify-center gap-3">
       <Chevron className="logo_chevron" />
       <div className="relative flex items-end gap-1">
-        <L className="logo_L" />
-        <U className="logo_U" />
-        <I className="logo_I" />
-        <Z className="logo_Z" />
+        <L className="letter" />
+        <U className="letter" />
+        <I className="letter" />
+        <Z className="letter" />
       </div>
     </div>
   )

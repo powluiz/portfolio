@@ -62,6 +62,11 @@ export const pageLinks = [
   },
   {
     isInternal: true,
+    label: 'Projects',
+    to: '#section-projects',
+  },
+  {
+    isInternal: true,
     label: 'Experience',
     to: '#section-experience',
   },
