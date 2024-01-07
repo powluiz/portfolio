@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-const colors = require('tailwindcss/colors')
+import colors from 'tailwindcss/colors'
 
 export const breakpoints = {
   sm: '480px',

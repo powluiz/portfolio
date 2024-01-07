@@ -27,7 +27,8 @@
       "@/*": ["src/*"],
       "@components/*": ["src/components/*"],
       "@assets/*": ["src/assets/*"],
-      "@language/*": ["src/locale/*"]
+      "@language/*": ["src/locale/*"],
+      "@utils/*": ["src/utils/*"]
     }
   },
   "include": ["src", "../i18n.ts"],

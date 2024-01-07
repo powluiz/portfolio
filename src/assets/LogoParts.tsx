@@ -3,15 +3,37 @@ import { LegacyRef } from 'react'
 export interface ILogoProps {
   className?: string
   ref?: LegacyRef<SVGSVGElement> | undefined
+  size?: 'sm' | 'md' | 'lg' | 'xl'
 }
 
-const LogoFull = ({ className, ref }: ILogoProps) => {
+const sizeMap = {
+  sm: 0.25,
+  md: 0.5,
+  lg: 0.75,
+  xl: 1,
+}
+
+export const letterSpacingMap = {
+  sm: '0.0625rem',
+  md: '0.125rem',
+  lg: '0.185rem',
+  xl: '0.25rem',
+}
+
+export const chevronSpacingMap = {
+  sm: '0.25rem',
+  md: '0.45rem',
+  lg: '0.6rem',
+  xl: '0.75rem',
+}
+
+const LogoFull = ({ className, ref, size = 'xl' }: ILogoProps) => {
   return (
     <svg
       ref={ref}
       className={className}
-      width="110"
-      height="32"
+      width={110 * sizeMap[size]}
+      height={32 * sizeMap[size]}
       viewBox="0 0 110 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -44,13 +66,13 @@ const LogoFull = ({ className, ref }: ILogoProps) => {
   )
 }
 
-const Chevron = ({ className, ref }: ILogoProps) => {
+const Chevron = ({ className, ref, size = 'xl' }: ILogoProps) => {
   return (
     <svg
       ref={ref}
       className={className}
-      width="19"
-      height="24"
+      width={19 * sizeMap[size]}
+      height={24 * sizeMap[size]}
       viewBox="0 0 19 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -63,13 +85,13 @@ const Chevron = ({ className, ref }: ILogoProps) => {
   )
 }
 
-const L = ({ className, ref }: ILogoProps) => {
+const L = ({ className, ref, size = 'xl' }: ILogoProps) => {
   return (
     <svg
       ref={ref}
       className={className}
-      width="9"
-      height="32"
+      width={9 * sizeMap[size]}
+      height={32 * sizeMap[size]}
       viewBox="0 0 9 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -79,13 +101,13 @@ const L = ({ className, ref }: ILogoProps) => {
   )
 }
 
-const U = ({ className, ref }: ILogoProps) => {
+const U = ({ className, ref, size = 'xl' }: ILogoProps) => {
   return (
     <svg
       ref={ref}
       className={className}
-      width="25"
-      height="24"
+      width={25 * sizeMap[size]}
+      height={24 * sizeMap[size]}
       viewBox="0 0 25 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -98,13 +120,13 @@ const U = ({ className, ref }: ILogoProps) => {
   )
 }
 
-const I = ({ className, ref }: ILogoProps) => {
+const I = ({ className, ref, size = 'xl' }: ILogoProps) => {
   return (
     <svg
       ref={ref}
       className={className}
-      width="9"
-      height="32"
+      width={9 * sizeMap[size]}
+      height={32 * sizeMap[size]}
       viewBox="0 0 9 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -117,13 +139,13 @@ const I = ({ className, ref }: ILogoProps) => {
   )
 }
 
-const Z = ({ className, ref }: ILogoProps) => {
+const Z = ({ className, ref, size = 'xl' }: ILogoProps) => {
   return (
     <svg
       ref={ref}
       className={className}
-      width="25"
-      height="24"
+      width={25 * sizeMap[size]}
+      height={24 * sizeMap[size]}
       viewBox="0 0 25 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

@@ -31,7 +31,11 @@ const Home = () => {
   }, [])
 
   return (
-    <div id="section-home" ref={ctxWrapper} className="flex h-screen flex-col">
+    <div
+      id="section-home"
+      ref={ctxWrapper}
+      className="section-wrapper flex h-screen flex-col"
+    >
       <NavBar showLangSelector />
       <div className="content-wrapper flex h-full w-full flex-col-reverse gap-8 lg:flex-row lg:justify-between">
         {/* left part */}
@@ -49,11 +53,11 @@ const Home = () => {
             ))}
           </div>
           <div className="flex min-w-fit flex-col gap-1 ">
-            <h1 className="text-nowrap text-4xl font-extrabold text-primary-low md:text-6xl">
+            <h1 className="text-nowrap text-3xl font-extrabold text-primary-low md:text-6xl">
               {t("Hi, I'm Luiz:")}
             </h1>
             <div className="flex">
-              <h1 className="text-nowrap text-4xl font-extrabold text-primary-dark md:text-6xl">
+              <h1 className="text-nowrap text-3xl font-extrabold text-primary-dark md:text-6xl">
                 {t('Frontend Developer')}
               </h1>
             </div>

@@ -1,9 +1,18 @@
-import { Chevron, L, U, I, Z } from '@/assets/LogoParts'
+import {
+  Chevron,
+  L,
+  U,
+  I,
+  Z,
+  ILogoProps,
+  letterSpacingMap,
+  chevronSpacingMap,
+} from '@/assets/LogoParts'
 
 import gsap from 'gsap'
 import { useLayoutEffect, useRef } from 'react'
 
-const Logo = () => {
+const Logo = ({ size = 'xl' }: ILogoProps) => {
   const ctxWrapper = useRef(null)
   const tl = gsap.timeline({
     defaults: {
@@ -29,13 +38,24 @@ const Logo = () => {
   }, [])
 
   return (
-    <div ref={ctxWrapper} className="flex items-center justify-center gap-3">
-      <Chevron className="logo_chevron" />
-      <div className="relative flex items-end gap-1">
-        <L className="letter" />
-        <U className="letter" />
-        <I className="letter" />
-        <Z className="letter" />
+    <div
+      ref={ctxWrapper}
+      className="flex items-center justify-center"
+      style={{
+        gap: chevronSpacingMap[size],
+      }}
+    >
+      <Chevron className="logo_chevron" size={size} />
+      <div
+        className="relative flex items-end"
+        style={{
+          gap: letterSpacingMap[size],
+        }}
+      >
+        <L className="letter" size={size} />
+        <U className="letter" size={size} />
+        <I className="letter" size={size} />
+        <Z className="letter" size={size} />
       </div>
     </div>
   )
