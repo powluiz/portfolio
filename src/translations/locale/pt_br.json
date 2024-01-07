@@ -73,6 +73,10 @@
 
     "MessageLabel": "Sua Mensagem",
     "MessagePlaceholder": "O seu perfil me chamou a atenção e estou interessado em discutir uma possível oportunidade de colaboração. Você está disponível para uma breve conversa?",
-    "submit": "Enviar"
+    "error-message": "Este campo é necessário.",
+    "error-message-email": "Insira um endereço de email válido.",
+    "submit": "Enviar",
+    "send-success-message": "Sua mensagem foi enviada.",
+    "send-error-message": "Algo deu errado. Tente novamente."
   }
 }

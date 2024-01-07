@@ -73,6 +73,11 @@
 
     "MessageLabel": "Your Message",
     "MessagePlaceholder": "Your profile caught my attention and I'm interested in discussing a potential collaboration opportunity. Are you available for a brief chat?",
-    "submit": "Submit"
+
+    "error-message": "This field is required.",
+    "error-message-email": "Enter a valid email address.",
+    "submit": "Submit",
+    "send-success-message": "Your message has been sent.",
+    "send-error-message": "Something went wrong. Please try again."
   }
 }

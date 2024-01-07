@@ -11,6 +11,7 @@ import ToolList from './ToolList'
 import Badge from './Badge'
 import Logo from './Logo'
 import ScrollTop from './ScrollTop'
+import Toast from './Toast'
 
 export {
   Home,
@@ -26,4 +27,5 @@ export {
   ToolList,
   Logo,
   ScrollTop,
+  Toast,
 }
