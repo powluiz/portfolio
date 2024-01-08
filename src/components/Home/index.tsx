@@ -34,7 +34,7 @@ const Home = () => {
     <div
       id="section-home"
       ref={ctxWrapper}
-      className="section-wrapper flex h-screen flex-col"
+      className="section-wrapper flex flex-col"
     >
       <NavBar showLangSelector />
       <div className="content-wrapper flex h-full w-full flex-col-reverse gap-8 lg:flex-row lg:justify-between">
