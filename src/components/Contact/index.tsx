@@ -4,6 +4,7 @@ import { FormikValues, useFormik } from 'formik'
 import * as yup from 'yup'
 import { Button } from '..'
 import { toast } from 'react-toastify'
+import emailjs from '@emailjs/browser'
 
 const contactSchema = yup.object().shape({
   name: yup.string().required(),
@@ -15,12 +16,28 @@ const Contact = () => {
   const { t } = useTranslation('contact')
 
   const handleSubmit = (values: FormikValues) => {
-    console.log(values)
-    // toast.error(t('send-error-message'))
+    const templateParams = {
+      from_name: values?.name,
+      from_email: values?.email,
+      message: values?.message,
+    }
 
-    // se sucesso
-    toast.success(t('send-success-message'))
-    formik?.resetForm()
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAIL_SERVICE_ID,
+        import.meta.env.VITE_EMAIL_TEMPLATE_ID,
+        templateParams,
+        import.meta.env.VITE_EMAIL_PUBLIC_KEY,
+      )
+      .then(
+        () => {
+          toast.success(t('send-success-message'))
+          formik?.resetForm()
+        },
+        () => {
+          toast.error(t('send-error-message'))
+        },
+      )
   }
 
   const formik = useFormik({
@@ -130,7 +147,7 @@ const Contact = () => {
           </div>
           <Button
             type="submit"
-            className="mx-auto w-full rounded-full bg-primary-low px-8 md:w-fit"
+            className="mx-auto w-full rounded-full px-8 md:w-fit"
             disabled={isButtonDisabled}
           >
             <h3 className="text-base">{t('submit')}</h3>
