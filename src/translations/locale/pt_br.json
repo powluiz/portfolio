@@ -26,24 +26,24 @@
     "Skills": "Habilidades",
 
     "Development": "Desenvolvimento",
-    "DevelopText": "BR - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    "DevelopText": "Me envolvo ativamente no desenvolvimento de projetos utilizando tecnologias web como Typescript e Node.js, explorando constantemente inovações tecnológicas para elevar meus projetos a patamares mais elevados. Também me envolvi em projetos envolvendo programação embarcada e processamento de imagens.",
 
     "UX/UI Design": "UX/UI Design",
-    "UXDesignText": "BR - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    "UXDesignText": "Guiado pelo minimalismo, utilizo o Figma para transformar ideias em interfaces intuitivas e cativantes. Crio protótipos de interfaces e Design Systems com base na compreensão das necessidades do usuário, além de sempre priorizar uma experiência intuitiva e sem falhas.",
 
     "Design": "Design Gráfico",
-    "DesignText": "BR - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    "DesignText": "Minha experiência em design gráfico gira em torno da criação de identidades visuais marcantes e materiais de marketing memoráveis. Dominando as principais ferramentas do Adobe Creative Cloud, minha dedicação transcende a estética: trata-se de transmitir mensagens de maneira efetiva.",
 
     "Video Editing": "Edição de Vídeo",
-    "VideoEditText": "BR - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+    "VideoEditText": "Como editor de vídeo e Motion Designer, meu trabalho envolve criar uma narrativa visual envolvente para transformar conceitos em histórias visuais. Em cada projeto, busco tanto a excelência visual quanto emocional, com o objetivo de criar uma experiência memorável para o espectador."
   },
 
   "about": {
     "About me": "Sobre mim",
-    "AboutText": "BR - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    "AboutText": "Sou Luiz Ricardo, tenho 22 anos e sou desenvolvedor Front-End. Atualmente, curso Engenharia da Computação na Universidade Tecnológica Federal do Paraná. Tenho uma profunda paixão por design e tecnologia, dedicando um tempo considerável para aprofundar e expandir meus conhecimentos nessas áreas. Além disso, sou um entusiasta da música, e adoro tocar instrumentos musicais.",
 
     "Tools and Technologies": "Ferramentas e Tecnologias",
-    "ToolsText": "BR - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    "ToolsText": "Gosto de explorar novas ferramentas e estou sempre em busca de me especializar em novas habilidades. Abaixo, você pode conferir algumas das tecnologias que já utilizei em projetos pessoais e profissionais."
   },
 
   "projects": {

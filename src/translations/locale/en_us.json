@@ -26,24 +26,24 @@
     "Skills": "Skills",
 
     "Development": "Development",
-    "DevelopText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    "DevelopText": "I actively engage in project development using web technologies like Typescript and Node.js, while constantly delving into innovative tech to take my projects to higher realms. I've also delved into projects with embedded programming and image processing.",
 
     "UX/UI Design": "UX/UI Design",
-    "UXDesignText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    "UXDesignText": "Guided by minimalism, I leverage Figma to turn ideas into intuitive and captivating interfaces. I conduct the prototyping of visual interfaces and Design Systems, guided by a deep understanding of user needs and prioritizing an intuitive, seamless experience.",
 
     "Design": "Graphic Design",
-    "DesignText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    "DesignText": "My experience in graphic design revolves around crafting striking visual identities and memorable marketing materials. Mastering the key tools in Adobe Creative Cloud, my dedication transcends aesthetics: It's about conveying messages in a compelling manner.",
 
     "Video Editing": "Video Editing",
-    "VideoEditText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+    "VideoEditText": "As a video editor and Motion Designer, my job involves crafting an engaging visual narrative to transform concepts into visual stories. In each project, I strive for both visual and emotional excellence, aiming to create a memorable experience for the viewer."
   },
 
   "about": {
     "About me": "About me",
-    "AboutText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
+    "AboutText": "I'm Luiz Ricardo, a 22-year-old frontend developer. Currently, I'm pursuing a degree in Computer Engineering at the Federal Technological University of Paraná. I have a profound passion for design and technology, dedicating considerable time to delve into and expand my knowledge in these areas. Additionally, I'm an avid music enthusiast, finding joy in playing musical instruments.",
 
     "Tools and Technologies": "Tools and Technologies",
-    "ToolsText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    "ToolsText": "I enjoy exploring new tools and I'm always seeking to specialize in new skills. Below, you can check out some of the technologies I have already used in personal and professional projects."
   },
 
   "projects": {
