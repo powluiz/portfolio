@@ -35,7 +35,7 @@ const Home = () => {
       <NavBar showLangSelector />
       <div className="content-wrapper flex h-dvh min-h-fit w-full flex-col items-center justify-center gap-8 md:flex-row md:justify-between">
         {/* left part */}
-        <div className="flex h-fit w-full flex-col items-start justify-center gap-4 lg:gap-6">
+        <div className="mt-12 flex h-fit w-full flex-col items-start justify-center gap-4 md:mt-0 lg:gap-6">
           <div className="flex w-fit items-center justify-center gap-3">
             {socialLinks?.map(link => (
               <a
@@ -82,8 +82,8 @@ const Home = () => {
         </div>
 
         {/* right part */}
-        <div className="relative hidden h-fit w-full items-center justify-center md:flex lg:h-full">
-          <div className="z-10 w-48 max-w-[25rem] md:w-60 lg:flex lg:w-full">
+        <div className="hidden-in-small-screen relative h-fit w-full items-center justify-center">
+          <div className="z-10 mx-auto w-[80%] max-w-[25rem] md:w-60 lg:flex lg:w-full">
             <HeroIllustration />
           </div>
         </div>

@@ -16,7 +16,8 @@ const About = () => {
           {t('About me')}
         </h1>
         <div className="flex w-full flex-col items-center justify-center gap-6 md:flex-row">
-          <div className="z-10 aspect-square w-44 flex-shrink-0 overflow-hidden rounded-full p-1 outline outline-2 outline-primary-dark">
+          <div className="relative z-10 aspect-square w-52 flex-shrink-0 rounded-full p-[0.5rem] outline outline-2 outline-primary-dark">
+            <div className="absolute bottom-0 left-0 right-0 top-0 m-auto h-[0.55rem] w-[0.55rem] animate-[circle_10s_linear_infinite] rounded-full bg-primary-dark" />
             <img
               src={picture}
               className="h-full w-full rounded-full object-cover"

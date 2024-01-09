@@ -67,6 +67,10 @@ export default {
           '50%': { transform: 'translate(-2%,2%)' },
           '75%': { transform: 'translate(2%,-2%)' },
         },
+        circle: {
+          '0%': { transform: 'rotate(0deg) translate(6.5625rem)' },
+          '100%': { transform: 'rotate(360deg) translate(6.5625rem)' },
+        },
       },
     },
   },

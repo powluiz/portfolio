@@ -1,5 +1,5 @@
 import resolveconfig from 'tailwindcss/resolveConfig'
-import tailwindconfig from '../../../tailwind.config'
+import tailwindconfig from '../../../../tailwind.config'
 import { useEffect, useState } from 'react'
 
 export type TBreakpointSizes = 'sm' | 'md' | 'lg' | 'xl'
