@@ -155,7 +155,7 @@ const Contact = () => {
         </form>
       </div>
       <DotPattern className="absolute right-[2rem] top-[3rem] z-[1] animate-wiggle-pos opacity-30" />
-      <DotPattern className="absolute bottom-[1.5rem] left-[4.5rem] z-[1] animate-wiggle-pos opacity-30" />
+      <DotPattern className="absolute bottom-[3.5rem] left-[4.5rem] z-[1] animate-wiggle-pos opacity-30" />
     </div>
   )
 }

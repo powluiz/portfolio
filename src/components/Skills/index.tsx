@@ -1,7 +1,6 @@
 import DotPattern from '@/assets/DotPattern'
 import useBreakpoint from '@/utils/hooks/useBreakpoint'
 import { useTranslation } from 'react-i18next'
-import { twMerge } from 'tailwind-merge'
 
 interface ITextBlockProps {
   title: string
@@ -36,13 +35,8 @@ const Skills = () => {
 
   return (
     <div id="section-skills" className="section-wrapper bg-primary-low">
-      <div
-        className={twMerge(
-          'content-wrapper flex h-full min-h-fit w-full flex-col gap-10 lg:gap-16',
-          'py-12',
-        )}
-      >
-        <h1 className="z-10 h-fit w-full text-center text-[2.5rem] font-extrabold text-neutral-white md:text-5xl lg:text-6xl">
+      <div className="content-wrapper flex h-full min-h-fit w-full flex-col gap-10 lg:gap-16">
+        <h1 className="z-10 h-fit w-full text-center text-[2.5rem] font-extrabold text-neutral-white md:text-4xl lg:text-5xl">
           {t('Skills')}
         </h1>
 

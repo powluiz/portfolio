@@ -77,10 +77,11 @@ const Home = () => {
             </span>
           </div>
           <div className="flex gap-6">
-            <Button onClick={() => {}} variant="secondary">
-              {t('About me')}
-            </Button>
-            <Button onClick={() => {}}>{t('Get in touch')}</Button>
+            <a href="#section-contact">
+              <Button className="rounded-full px-8" onClick={() => {}}>
+                <h3 className="text-base">{t('Get in touch')}</h3>
+              </Button>
+            </a>
           </div>
         </div>
 

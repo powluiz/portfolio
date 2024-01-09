@@ -12,6 +12,7 @@ export const breakpoints = {
 export const themeColors = {
   primary: {
     low: '#0F172A',
+    lowlight: '#201F54',
     dark: '#7547FF',
     base: '#875FFF',
     light: '#DCD1FF',
