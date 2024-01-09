@@ -1,10 +1,10 @@
 import { useTranslation } from 'react-i18next'
 import { Button, NavBar } from '..'
 import { socialLinks } from '@/utils/constants'
-import picture from '@/assets/me.jpg'
 import DotPattern from '@/assets/DotPattern'
 import gsap from 'gsap'
 import { useLayoutEffect, useRef } from 'react'
+import HeroIllustration from '@/assets/HeroIllustration'
 
 const Home = () => {
   const { t } = useTranslation('home')
@@ -31,15 +31,11 @@ const Home = () => {
   }, [])
 
   return (
-    <div
-      id="section-home"
-      ref={ctxWrapper}
-      className="section-wrapper flex flex-col"
-    >
+    <div id="section-home" ref={ctxWrapper} className="section-wrapper">
       <NavBar showLangSelector />
-      <div className="content-wrapper flex h-full w-full flex-col-reverse gap-8 lg:flex-row lg:justify-between">
+      <div className="content-wrapper flex h-dvh min-h-fit w-full flex-col items-center justify-center gap-8 md:flex-row md:justify-between">
         {/* left part */}
-        <div className="flex h-full w-full flex-col items-start justify-center gap-4 py-8 lg:gap-6">
+        <div className="flex h-fit w-full flex-col items-start justify-center gap-4 lg:gap-6">
           <div className="flex w-fit items-center justify-center gap-3">
             {socialLinks?.map(link => (
               <a
@@ -52,26 +48,26 @@ const Home = () => {
               </a>
             ))}
           </div>
-          <div className="flex min-w-fit flex-col gap-1 ">
-            <h1 className="text-nowrap text-3xl font-extrabold text-primary-low md:text-6xl">
+          <div className="flex min-w-fit flex-col gap-1">
+            <h1 className="text-nowrap text-3xl font-extrabold text-primary-low md:text-5xl lg:text-6xl">
               {t("Hi, I'm Luiz:")}
             </h1>
             <div className="flex">
-              <h1 className="text-nowrap text-3xl font-extrabold text-primary-dark md:text-6xl">
+              <h1 className="text-wrap text-3xl font-extrabold text-primary-dark md:text-nowrap md:text-5xl lg:text-6xl">
                 {t('Frontend Developer')}
               </h1>
             </div>
             <span className="w-fit">
-              <span className="inline text-base font-normal lg:text-xl">
+              <span className="inline text-base font-normal md:text-lg lg:text-xl">
                 {t('My job is to turn')}
               </span>
-              <span className="inline text-base font-semibold lg:text-xl">
+              <span className="inline text-base font-semibold md:text-lg lg:text-xl">
                 {t('ideas')}
               </span>
-              <span className="inline text-base font-normal lg:text-xl">
+              <span className="inline text-base font-normal md:text-lg lg:text-xl">
                 {t('into')}
               </span>
-              <span className="inline text-base font-semibold lg:text-xl">
+              <span className="inline text-base font-semibold md:text-lg lg:text-xl">
                 {t('meaningful experiences')}
               </span>
             </span>
@@ -86,18 +82,13 @@ const Home = () => {
         </div>
 
         {/* right part */}
-        <div className="relative hidden h-full w-full items-center justify-center lg:flex">
-          <DotPattern className="absolute right-[3rem] top-[6rem] z-[1] animate-wiggle-pos opacity-30 md:opacity-45" />
-          <DotPattern className="absolute bottom-[5rem] left-[3rem] z-[1] animate-wiggle-pos opacity-30 md:opacity-45" />
-          <div className="z-10 aspect-square w-40 flex-shrink-0 overflow-hidden rounded-full bg-neutral-dark drop-shadow-md hover:brightness-105 lg:w-72">
-            <img
-              src={picture}
-              className="h-full w-full object-cover"
-              alt="That's me!"
-            />
+        <div className="relative hidden h-fit w-full items-center justify-center md:flex lg:h-full">
+          <div className="z-10 w-48 max-w-[25rem] md:w-60 lg:flex lg:w-full">
+            <HeroIllustration />
           </div>
         </div>
       </div>
+      <DotPattern className="absolute right-[10%] top-[10%] z-0 animate-wiggle-pos opacity-30" />
       <div className="home-gradient absolute z-[-10] h-full w-full opacity-85" />
     </div>
   )

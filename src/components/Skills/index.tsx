@@ -14,7 +14,7 @@ const TextBlock = ({ title, text, align }: ITextBlockProps) => {
   return (
     <div className="flex w-fit flex-col gap-4">
       <h2
-        className={`text-center text-2xl font-semibold text-primary-base sm:text-3xl lg:text-4xl`}
+        className={`text-center text-3xl font-semibold text-primary-base lg:text-4xl`}
         style={{
           textAlign: isLargerThanMd ? align : 'center',
         }}
@@ -23,6 +23,9 @@ const TextBlock = ({ title, text, align }: ITextBlockProps) => {
       </h2>
       <p
         className={`h-fit w-full hyphens-auto text-justify text-base font-light leading-tight text-neutral-base lg:text-lg`}
+        style={{
+          textAlignLast: isLargerThanMd ? align : 'center',
+        }}
       >
         {text}
       </p>
