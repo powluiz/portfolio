@@ -1,30 +1,28 @@
-import {
-  About,
-  Contact,
-  Experience,
-  Home,
-  Projects,
-  ScrollTop,
-  Skills,
-  Toast,
-} from './components'
+import { ScrollTop, Toast } from './components'
 import { Analytics } from '@vercel/analytics/react'
 
-import 'react-toastify/dist/ReactToastify.css'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
-function App() {
+import 'react-toastify/dist/ReactToastify.css'
+import HomePage from './pages/HomePage'
+import NotFound from './pages/NotFound'
+
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <HomePage />,
+    errorElement: <NotFound />,
+  },
+])
+
+const App = () => {
   return (
-    <div>
+    <>
       <Toast />
       <ScrollTop />
-      <Home />
-      <Skills />
-      <About />
-      <Projects />
-      <Experience />
-      <Contact />
+      <RouterProvider router={router} />
       <Analytics />
-    </div>
+    </>
   )
 }
 
