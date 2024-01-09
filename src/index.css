@@ -9,7 +9,7 @@
 
   html {
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
+    /* scroll-snap-type: y mandatory; */
   }
 
   body {
@@ -18,7 +18,14 @@
   }
 
   body::-webkit-scrollbar {
-    @apply hidden;
+    @apply w-[0.55rem];
+    /* @apply hidden; */
+  }
+  body::-webkit-scrollbar-track {
+    @apply rounded-full bg-slate-200;
+  }
+  body::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-slate-400;
   }
 
   .tinyscroll::-webkit-scrollbar {
