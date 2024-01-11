@@ -1,3 +1,4 @@
+import { Dropdown } from '@/components'
 import i18n, { LANGUAGES, handleChangeLanguage } from '@/translations/i18n'
 
 const LanguageSelector = () => {
@@ -7,25 +8,23 @@ const LanguageSelector = () => {
   )
 
   return (
-    <div className="flex flex-row gap-2">
-      <div className="bg-neutral-light flex h-6 w-6 items-center justify-center overflow-hidden rounded-full">
+    <div className="flex flex-row items-center justify-center gap-2">
+      <div className="flex h-6 w-6 items-center justify-center overflow-hidden rounded-full bg-neutral-light">
         <img
           src={`https://flagcdn.com/${languageObject?.icon}.svg`}
           className="h-full object-cover"
           alt="Brazil"
         />
       </div>
-      <select
-        defaultValue={i18n.language}
-        onChange={handleChangeLanguage}
-        className="outline-none"
-      >
-        {LANGUAGES.map(({ label, value }) => (
-          <option key={`select-option-${label}`} value={value}>
-            {label}
-          </option>
-        ))}
-      </select>
+
+      <Dropdown
+        options={LANGUAGES}
+        position="right"
+        innerWidth="w-fit"
+        onChange={option => {
+          handleChangeLanguage(option)
+        }}
+      />
     </div>
   )
 }

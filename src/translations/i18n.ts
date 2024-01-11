@@ -4,7 +4,13 @@ import { initReactI18next } from 'react-i18next'
 import en_us from './locale/en_us.json'
 import pt_br from './locale/pt_br.json'
 
-export const LANGUAGES = [
+export interface ILanguageProps {
+  label: string
+  value: string
+  icon: string
+}
+
+export const LANGUAGES: ILanguageProps[] = [
   { label: 'EN-US', value: 'en_us', icon: 'us' },
   { label: 'PT-BR', value: 'pt_br', icon: 'br' },
 ]
@@ -23,8 +29,10 @@ i18n.use(initReactI18next).init({
 export default i18n
 
 export const handleChangeLanguage = (
-  e: React.ChangeEvent<HTMLSelectElement>,
+  option: ILanguageProps,
+  event?: React.ChangeEvent<HTMLSelectElement>,
 ) => {
-  const lang_code = e.target.value
-  i18n.changeLanguage(lang_code)
+  event
+    ? i18n.changeLanguage(event?.target?.value)
+    : i18n.changeLanguage(option?.value)
 }

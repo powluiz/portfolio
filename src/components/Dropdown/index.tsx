@@ -1,4 +1,3 @@
-import { faBars } from '@fortawesome/free-solid-svg-icons'
 import { Icon } from '..'
 import { IDropdownOption, IDropdownProps } from './types'
 import { useLayoutEffect, useRef, useState } from 'react'
@@ -10,7 +9,9 @@ const Dropdown = ({
   options,
   onChange,
   className,
+  innerWidth,
   position,
+  icon,
 }: IDropdownProps) => {
   const [activeOption, setActiveOption] = useState<IDropdownOption>(options[0])
   const [isOpen, setIsOpen] = useState(false)
@@ -92,14 +93,17 @@ const Dropdown = ({
           setIsOpen(true)
         }}
       >
-        <Icon icon={faBars} size="sm" />
+        {icon && <Icon icon={icon} size="sm" />}
         <h3 className="text-base font-medium">{activeOption?.label}</h3>
       </button>
 
       <div
         ref={innerRef}
         id="dropdown_content"
-        className="absolute  top-[120%] flex w-[10rem] min-w-fit flex-col shadow-lg"
+        className={twMerge(
+          'absolute  top-[120%] flex w-[10rem] min-w-fit flex-col shadow-lg',
+          innerWidth,
+        )}
         style={side === 'right' ? { right: 0 } : { left: 0 }}
       >
         {options?.map((option, index) => (

@@ -82,7 +82,7 @@ const Home = () => {
         </div>
 
         {/* right part */}
-        <div className="hidden-in-small-screen relative h-fit w-full items-center justify-center">
+        <div className="relative hidden h-fit w-full items-center justify-center lg:flex">
           <div className="z-10 mx-auto w-[80%] max-w-[25rem] md:w-60 lg:flex lg:w-full">
             <HeroIllustration />
           </div>

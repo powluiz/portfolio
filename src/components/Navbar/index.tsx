@@ -4,6 +4,7 @@ import { Dropdown, Logo } from '..'
 import { pageLinks } from '@/utils/constants'
 import { useTranslation } from 'react-i18next'
 import useBreakpoint from '@/utils/hooks/useBreakpoint'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
 
 const NavBar = ({ showLangSelector = false }: INavbarProps) => {
   const { t } = useTranslation('navbar')
@@ -31,6 +32,7 @@ const NavBar = ({ showLangSelector = false }: INavbarProps) => {
         <div className="flex lg:hidden">
           <Dropdown
             className="w-fit"
+            icon={faBars}
             options={pageLinks?.map(link => ({
               label: link?.label,
               value: link?.to,
