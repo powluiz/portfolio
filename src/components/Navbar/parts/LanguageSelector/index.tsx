@@ -20,7 +20,7 @@ const LanguageSelector = () => {
       <Dropdown
         options={LANGUAGES}
         position="right"
-        innerWidth="w-fit"
+        innerWidth="w-[5.5rem]"
         onChange={option => {
           handleChangeLanguage(option)
         }}
