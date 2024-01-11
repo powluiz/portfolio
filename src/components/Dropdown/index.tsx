@@ -101,7 +101,7 @@ const Dropdown = ({
         ref={innerRef}
         id="dropdown_content"
         className={twMerge(
-          'absolute  top-[120%] flex w-[10rem] min-w-fit flex-col shadow-lg',
+          'absolute  top-[120%] flex w-[10rem] min-w-fit flex-col drop-shadow-lg',
           innerWidth,
         )}
         style={side === 'right' ? { right: 0 } : { left: 0 }}
@@ -109,7 +109,7 @@ const Dropdown = ({
         {options?.map((option, index) => (
           <button
             key={`dropdown-item-${index}`}
-            className="border-gray-3 00 w-full min-w-fit border-b-[1px] bg-neutral-white px-4 py-3 text-left font-medium text-primary-low transition-all duration-100 ease-in-out first-of-type:rounded-t-lg last-of-type:rounded-b-lg last-of-type:border-none hover:bg-gray-100"
+            className="border-gray-3 00 w-full min-w-fit border-b-[1px] bg-neutral-white px-4 py-3 text-left font-medium text-primary-low transition-all duration-100 ease-in-out first-of-type:rounded-t-xl last-of-type:rounded-b-xl last-of-type:border-none hover:bg-gray-100"
             onClick={() => handleChange(option)}
           >
             {option.label}
