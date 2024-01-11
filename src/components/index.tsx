@@ -2,6 +2,7 @@ import NavBar from './Navbar'
 import Icon from './Icon'
 import Home from './Home'
 import Skills from './Skills'
+import Dropdown from './Dropdown'
 import Button from './Button'
 import About from './About'
 import Projects from './Projects'
@@ -14,16 +15,17 @@ import ScrollTop from './ScrollTop'
 import Toast from './Toast'
 
 export {
+  About,
+  Badge,
+  Button,
+  Contact,
+  Dropdown,
+  Experience,
   Home,
   Skills,
-  About,
   Projects,
-  Experience,
-  Contact,
-  Badge,
   Icon,
   NavBar,
-  Button,
   ToolList,
   Logo,
   ScrollTop,

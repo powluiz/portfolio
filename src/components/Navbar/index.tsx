@@ -1,7 +1,6 @@
 import { INavbarProps } from './types'
 import LanguageSelector from './parts/LanguageSelector'
-import { Icon, Logo } from '..'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { Dropdown, Logo } from '..'
 import { pageLinks } from '@/utils/constants'
 import { useTranslation } from 'react-i18next'
 import useBreakpoint from '@/utils/hooks/useBreakpoint'
@@ -29,8 +28,19 @@ const NavBar = ({ showLangSelector = false }: INavbarProps) => {
       <div className="flex items-center justify-center gap-3">
         {showLangSelector && <LanguageSelector />}
 
-        <div className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full transition-all duration-300 ease-in-out hover:bg-neutral-high lg:hidden">
-          <Icon icon={faBars} size="lg" />
+        <div className="flex lg:hidden">
+          <Dropdown
+            className="w-fit"
+            options={pageLinks?.map(link => ({
+              label: link?.label,
+              value: link?.to,
+            }))}
+            onChange={option => {
+              const link = document.createElement('a')
+              link.href = option?.value
+              link.click()
+            }}
+          />
         </div>
       </div>
     </nav>
