@@ -4,10 +4,18 @@ import { IDropdownOption, IDropdownProps } from './types'
 import { useLayoutEffect, useRef, useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 import gsap from 'gsap'
+import ReactDOM from 'react-dom'
 
-const Dropdown = ({ options, onChange, className }: IDropdownProps) => {
+const Dropdown = ({
+  options,
+  onChange,
+  className,
+  position,
+}: IDropdownProps) => {
   const [activeOption, setActiveOption] = useState<IDropdownOption>(options[0])
   const [isOpen, setIsOpen] = useState(false)
+  const innerRef = useRef(null)
+  const [side, setSide] = useState<'left' | 'right'>(position || 'left')
 
   const ctxWrapper = useRef<any>(null)
   const tl = gsap.timeline({
@@ -21,6 +29,15 @@ const Dropdown = ({ options, onChange, className }: IDropdownProps) => {
   })
 
   useLayoutEffect(() => {
+    const nodeRef = ReactDOM.findDOMNode(innerRef?.current)
+    const distanceFromLeft =
+      (nodeRef as Element)?.getBoundingClientRect()?.x +
+      (nodeRef as Element)?.getBoundingClientRect()?.width
+
+    if (window.innerWidth - distanceFromLeft <= 0) {
+      setSide('right')
+    }
+
     let ctx = gsap.context(() => {
       tl.from('#dropdown_content', {
         ease: 'power4.out',
@@ -80,8 +97,10 @@ const Dropdown = ({ options, onChange, className }: IDropdownProps) => {
       </button>
 
       <div
+        ref={innerRef}
         id="dropdown_content"
-        className="absolute right-0 top-[120%] flex w-full min-w-fit flex-col shadow-lg"
+        className="absolute  top-[120%] flex w-[10rem] min-w-fit flex-col shadow-lg"
+        style={side === 'right' ? { right: 0 } : { left: 0 }}
       >
         {options?.map((option, index) => (
           <button
