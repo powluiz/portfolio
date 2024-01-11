@@ -34,7 +34,7 @@ const NavBar = ({ showLangSelector = false }: INavbarProps) => {
             className="w-fit"
             icon={faBars}
             options={pageLinks?.map(link => ({
-              label: link?.label,
+              label: t(link?.label),
               value: link?.to,
             }))}
             onChange={option => {
