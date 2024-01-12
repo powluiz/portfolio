@@ -1,6 +1,6 @@
 import { Icon } from '..'
 import { IDropdownOption, IDropdownProps } from './types'
-import { useLayoutEffect, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 import gsap from 'gsap'
 import ReactDOM from 'react-dom'
@@ -16,81 +16,76 @@ const Dropdown = ({
   const [activeOption, setActiveOption] = useState<IDropdownOption>(options[0])
   const [isOpen, setIsOpen] = useState(false)
   const innerRef = useRef(null)
+  const dropdownWrapper = useRef<any>(null)
   const [side, setSide] = useState<'left' | 'right'>(position || 'left')
 
-  const ctxWrapper = useRef<any>(null)
-  const tl = gsap.timeline({
-    defaults: {
-      y: -16,
-      opacity: 0,
-      display: 'none',
-      duration: 0.5,
-    },
-    paused: true,
-  })
+  const tl = useRef<any>()
 
-  useLayoutEffect(() => {
-    const nodeRef = ReactDOM.findDOMNode(innerRef?.current)
-    const distanceFromLeft =
-      (nodeRef as Element)?.getBoundingClientRect()?.x +
-      (nodeRef as Element)?.getBoundingClientRect()?.width
+  useEffect(() => {
+    tl.current = gsap.timeline({
+      paused: true,
+    })
 
-    if (window.innerWidth - distanceFromLeft <= 0) {
-      setSide('right')
-    }
+    tl.current.to(innerRef.current, {
+      ease: 'power2.inOut',
+      duration: 0.2,
+      opacity: 1,
+      y: 16,
+    })
+  }, [])
 
-    let ctx = gsap.context(() => {
-      tl.from('#dropdown_content', {
-        ease: 'power4.out',
-        onComplete: () => {
-          tl.pause()
-        },
-      }).to('#dropdown_content', {
-        ease: 'power4.in',
-        onComplete: () => {
-          tl.restart()
-          tl.pause()
-        },
-      })
-
-      if (isOpen) {
-        tl.play()
-      } else {
-        tl.reverse()
-      }
-    }, ctxWrapper)
-
-    return () => ctx.revert()
+  useEffect(() => {
+    isOpen ? tl.current.play() : tl.current.reverse()
   }, [isOpen])
 
   useLayoutEffect(() => {
+    // check if dropdown is out of screen
+    const checkBoundaries = () => {
+      const nodeRef = ReactDOM.findDOMNode(innerRef?.current)
+      const distanceFromLeft =
+        (nodeRef as Element)?.getBoundingClientRect()?.x +
+        (nodeRef as Element)?.getBoundingClientRect()?.width
+
+      if (window.innerWidth - distanceFromLeft <= 0) {
+        setSide('right')
+      }
+    }
+
+    // check for outside click
     const handleClickOutside = (event: MouseEvent) => {
-      if (
-        ctxWrapper.current &&
-        !ctxWrapper.current.contains(event.target as Node)
-      ) {
+      if (!dropdownWrapper.current.contains(event.target as Node)) {
         setIsOpen(false)
       }
     }
 
+    checkBoundaries()
+
+    document.addEventListener('resize', checkBoundaries)
     document.addEventListener('mousedown', handleClickOutside)
-    return () => document.removeEventListener('mousedown', handleClickOutside)
+    return () => {
+      document.removeEventListener('resize', checkBoundaries)
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
   }, [])
 
   const handleChange = (option: IDropdownOption) => {
     setActiveOption(option)
-    setIsOpen(false)
+    handleButtonClick()
     if (onChange) {
       onChange(option)
     }
   }
 
+  const handleButtonClick = () => {
+    setIsOpen(!isOpen)
+  }
+
   return (
-    <div ref={ctxWrapper} className={twMerge('relative', className)}>
+    <div ref={dropdownWrapper} className={twMerge('relative', className)}>
       <button
         className="flex w-full items-center justify-center gap-2 rounded-md border-[1px] border-transparent bg-transparent px-4 py-3 transition-all duration-100 ease-in-out focus:border-primary-low [&>*:not(:first-child)]:hidden lg:[&>*:not(:first-child)]:flex"
         onClick={() => {
-          setIsOpen(true)
+          handleButtonClick()
         }}
       >
         {icon && <Icon icon={icon} size="sm" />}
@@ -101,10 +96,13 @@ const Dropdown = ({
         ref={innerRef}
         id="dropdown_content"
         className={twMerge(
-          'absolute  top-[120%] flex w-[10rem] min-w-fit flex-col drop-shadow-lg',
+          'absolute top-[80%] w-[10rem] min-w-fit flex-col opacity-0 drop-shadow-lg',
           innerWidth,
         )}
-        style={side === 'right' ? { right: 0 } : { left: 0 }}
+        style={{
+          ...(!isOpen && { pointerEvents: 'none' }),
+          ...(side === 'right' ? { right: 0 } : { left: 0 }),
+        }}
       >
         {options?.map((option, index) => (
           <button

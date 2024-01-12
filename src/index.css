@@ -5,6 +5,9 @@
 @layer base {
   * {
     letter-spacing: -0.03em;
+    font-smooth: always;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   html {
@@ -33,10 +36,10 @@
     @apply w-[0.375rem];
   }
   .tinyscroll::-webkit-scrollbar-track {
-    @apply rounded-full bg-slate-200;
+    @apply rounded-full bg-primary-lowlight;
   }
   .tinyscroll::-webkit-scrollbar-thumb {
-    @apply rounded-full bg-slate-400;
+    @apply rounded-full bg-indigo-800;
   }
 
   .section-wrapper {
