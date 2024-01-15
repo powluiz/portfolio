@@ -40,10 +40,11 @@
 
   "about": {
     "About me": "Sobre mim",
-    "AboutText": "Sou Luiz Ricardo, tenho 22 anos e sou desenvolvedor Front-End. Atualmente, curso Engenharia da Computação na Universidade Tecnológica Federal do Paraná. Tenho uma profunda paixão por design e tecnologia, dedicando um tempo considerável para aprofundar e expandir meus conhecimentos nessas áreas. Além disso, sou um entusiasta da música, e adoro tocar instrumentos musicais.",
+    "AboutText": "Sou o Luiz, desenvolvedor Web Front-End e estudante de Engenharia da Computação na Universidade Tecnológica Federal do Paraná. Apaixonado por design e tecnologia, dedico um tempo significativo para aprofundar e expandir meus conhecimentos nessas áreas. Como entusiasta da música que adora de instrumentos musicais, descobri minha veia criativa desde cedo, quando comecei a atuar como freelancer com design gráfico, edição e motion. Vivo em constante processo de aperfeiçoamento e busco ativamente novas capacidades para me tornar um profissional mais versátil.",
 
     "Tools and Technologies": "Ferramentas e Tecnologias",
-    "ToolsText": "Gosto de explorar novas ferramentas e estou sempre em busca de me especializar em novas habilidades. Abaixo, você pode conferir algumas das tecnologias que já utilizei em projetos pessoais e profissionais."
+    "ToolsText": "Gosto de explorar novas ferramentas e estou sempre em busca de me especializar em algo novo. Abaixo, você pode conferir algumas das tecnologias que já utilizei em projetos pessoais e profissionais.",
+    "img_hover": "Esse sou eu!"
   },
 
   "projects": {

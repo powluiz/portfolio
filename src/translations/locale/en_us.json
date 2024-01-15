@@ -40,10 +40,11 @@
 
   "about": {
     "About me": "About me",
-    "AboutText": "I'm Luiz Ricardo, a 22-year-old frontend developer. Currently, I'm pursuing a degree in Computer Engineering at the Federal Technological University of Paraná. I have a profound passion for design and technology, dedicating considerable time to delve into and expand my knowledge in these areas. Additionally, I'm an avid music enthusiast, finding joy in playing musical instruments.",
+    "AboutText": "I'm Luiz, a Front-End Web developer currently studying Computer Engineering at the Federal Technological University of Paraná. Passionate about design and technology, I invest significant time in enhancing my expertise in these areas. A music enthusiast with a love for instruments, I uncovered my creative side early when a started freelancing in graphic design, editing, and motion. I live in a constant process of improvement and actively seek new skills to become a more versatile professional.",
 
     "Tools and Technologies": "Tools and Technologies",
-    "ToolsText": "I enjoy exploring new tools and I'm always seeking to specialize in new skills. Below, you can check out some of the technologies I have already used in personal and professional projects."
+    "ToolsText": "I enjoy exploring new tools and I'm always seeking to specialize in something new. Below, you can check out some of the technologies I have already used in personal and professional projects.",
+    "img_hover": "Yep, That's me!"
   },
 
   "projects": {

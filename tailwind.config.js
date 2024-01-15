@@ -68,7 +68,7 @@ export default {
           '75%': { transform: 'translate(2%,-2%)' },
         },
         circle: {
-          '0%': { transform: 'rotate(0deg) translate(6.5625rem)' },
+          '0%': { transform: 'rotate(0deg) translate(6.5625rem)' }, // this size of this is the same as half of the size of the circle inside the about page!
           '100%': { transform: 'rotate(360deg) translate(6.5625rem)' },
         },
       },
