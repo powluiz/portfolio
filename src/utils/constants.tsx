@@ -269,3 +269,64 @@ export const toolList = [
     badgeColor: '#9969FF',
   },
 ]
+
+/* ****************************************************** */
+
+export interface IExperienceItem {
+  company: string
+  name: string
+  time: string
+  description: string
+  skills: string[]
+}
+
+export const experienceList: IExperienceItem[] = [
+  {
+    company: 'Center for Excellence in Social Technologies',
+    name: 'Frontend Software Engineer',
+    time: '2022 - PRESENT',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    skills: [
+      'React',
+      'Node.js',
+      'Javascript',
+      'Typescript',
+      'Next.js',
+      'Chakra-UI',
+      'Storybook',
+      'Figma',
+      'Bitbucket',
+      'Jira Software',
+    ],
+  },
+  {
+    company: 'Bitz Softwares',
+    name: 'Marketing Analist',
+    time: '2022-2022',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    skills: [
+      'Adobe Photoshop',
+      'Adobe Illustrator',
+      'Adobe Premiere Pro',
+      'Adobe After Effects',
+      'RD Station',
+    ],
+  },
+  {
+    company: 'Freelancer',
+    name: 'Graphic Designer and Video Editor',
+    time: '2018-2022',
+    description:
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    skills: [
+      'Adobe Photoshop',
+      'Adobe Illustrator',
+      'Adobe Premiere Pro',
+      'Adobe After Effects',
+      'Adobe Audition',
+      'CorelDRAW',
+    ],
+  },
+]

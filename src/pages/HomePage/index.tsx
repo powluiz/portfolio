@@ -6,8 +6,14 @@ import {
   Projects,
   Skills,
 } from '@/components'
+import { useEffect } from 'react'
+import { toast } from 'react-toastify'
 
 function HomePage() {
+  useEffect(() => {
+    toast.info('Ops, this website is still under development. Come back later!')
+  }, [])
+
   return (
     <div>
       <Home />
