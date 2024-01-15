@@ -2,9 +2,11 @@ import DotPattern from '@/assets/DotPattern'
 import { experienceList } from '@/utils/constants'
 import { useTranslation } from 'react-i18next'
 import TimelineItem from './parts/TimelineItem'
+import i18n from '@/translations/i18n'
 
 const Experience = () => {
   const { t } = useTranslation('experience')
+  const activeLanguage = i18n.language
 
   return (
     <div id="section-experience" className="section-wrapper bg-primary-low">
@@ -16,12 +18,16 @@ const Experience = () => {
           <h2 className="text-center text-xl font-light text-neutral-white md:text-2xl">
             {t('ExperienceText')}
           </h2>
-          <div className="relative mt-9 flex flex-col gap-16">
+          <div className="relative mt-9 flex flex-col gap-16 pb-14">
             {experienceList?.map((experience, index) => (
               <TimelineItem
                 key={`experience-item-${index}`}
-                {...experience}
-              ></TimelineItem>
+                company={experience?.company[activeLanguage]}
+                role={experience?.role[activeLanguage]}
+                period={experience?.period[activeLanguage]}
+                description={experience?.description[activeLanguage]}
+                skills={experience?.skills}
+              />
             ))}
           </div>
         </div>

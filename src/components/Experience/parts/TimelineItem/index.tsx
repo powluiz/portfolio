@@ -1,16 +1,16 @@
-import { IExperienceItem } from '@/utils/constants'
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { ITimelineItemProps } from './types'
 gsap.registerPlugin(ScrollTrigger)
 
 const TimelineItem = ({
   company,
-  name,
-  time,
+  role,
+  period,
   description,
   skills,
-}: IExperienceItem) => {
+}: ITimelineItemProps) => {
   const tl = useRef<any>()
 
   const ctxWrapper = useRef<any>(null)
@@ -57,7 +57,7 @@ const TimelineItem = ({
       className="mx-auto flex max-w-[50rem] items-start gap-[5rem] text-nowrap"
     >
       <h1 className="anim-period min-w-[9.375rem] text-right font-normal text-neutral-base">
-        {time}
+        {period}
       </h1>
       <div className="flex flex-col gap-1">
         <div className="flex flex-col gap-0">
@@ -65,7 +65,7 @@ const TimelineItem = ({
             {company}
           </h1>
           <h1 className=" anim-name text-[1.25rem] font-medium text-slate-600">
-            {name}
+            {role}
           </h1>
         </div>
         <h1 className="anim-description mt-2 text-wrap text-justify text-lg font-normal text-neutral-base">

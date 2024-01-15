@@ -1,25 +1,12 @@
-import {
-  About,
-  Contact,
-  Experience,
-  Home,
-  Projects,
-  Skills,
-} from '@/components'
-import { useEffect } from 'react'
-import { toast } from 'react-toastify'
+import { About, Contact, Experience, Home, Skills } from '@/components'
 
 function HomePage() {
-  useEffect(() => {
-    toast.info('Ops, this website is still under development. Come back later!')
-  }, [])
-
   return (
     <div>
       <Home />
       <Skills />
       <About />
-      <Projects />
+      {/* <Projects /> */}
       <Experience />
       <Contact />
     </div>
