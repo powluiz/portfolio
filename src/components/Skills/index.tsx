@@ -37,8 +37,8 @@ const Skills = () => {
   const { t } = useTranslation('skills')
 
   return (
-    <div id="section-skills" className="section-wrapper bg-primary-low">
-      <div className="content-wrapper flex h-full min-h-fit w-full flex-col gap-10 lg:gap-16">
+    <div id="section-skills" className="section-wrapper bg-primary-low py-16">
+      <div className="content-wrapper flex h-full min-h-fit w-full max-w-[80rem] flex-col gap-10 lg:gap-16">
         <h1 className="z-10 h-fit w-full text-center text-[2.5rem] font-extrabold text-neutral-white md:text-4xl lg:text-5xl">
           {t('Skills')}
         </h1>

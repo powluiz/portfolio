@@ -10,7 +10,7 @@ const About = () => {
   const { t } = useTranslation('about')
 
   return (
-    <div id="section-about" className="section-wrapper bg-neutral-white">
+    <div id="section-about" className="section-wrapper bg-neutral-white py-16">
       <div className="content-wrapper z-10 flex h-full w-full flex-col gap-6">
         <h1 className="z-10 h-fit w-full text-center text-[2.5rem] font-extrabold text-primary-dark md:text-4xl lg:text-5xl">
           {t('About me')}
