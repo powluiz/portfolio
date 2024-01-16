@@ -24,9 +24,8 @@ const TimelineItem = ({
       },
       scrollTrigger: {
         trigger: ctxWrapper.current,
-        start: 'top 85%',
-        end: '75% 15%',
-        scrub: 1.5,
+        start: 'top 65%',
+        end: '75% 5%',
         // markers: true,
       },
     })
@@ -54,17 +53,17 @@ const TimelineItem = ({
   return (
     <div
       ref={ctxWrapper}
-      className="mx-auto flex max-w-[50rem] items-start gap-[5rem] text-nowrap"
+      className="mx-auto flex max-w-[50rem] flex-col items-start gap-2 text-nowrap md:flex-row md:gap-[5rem]"
     >
-      <h1 className="anim-period min-w-[9.375rem] text-right font-normal text-neutral-base">
+      <h1 className="anim-period md:tex-base min-w-fit text-right text-sm font-normal text-neutral-base md:min-w-[9.375rem]">
         {period}
       </h1>
       <div className="flex flex-col gap-1">
         <div className="flex flex-col gap-0">
-          <h1 className="anim-company text-[1.375rem] font-semibold text-white">
+          <h1 className="anim-company text-wrap text-[1.375rem] font-semibold text-white">
             {company}
           </h1>
-          <h1 className=" anim-name text-[1.25rem] font-medium text-slate-600">
+          <h1 className=" anim-name text-wrap text-[1.25rem] font-medium text-slate-600">
             {role}
           </h1>
         </div>
