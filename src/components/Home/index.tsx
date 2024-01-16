@@ -3,17 +3,35 @@ import { Button, NavBar } from '..'
 import { socialLinks } from '@/utils/constants'
 import DotPattern from '@/assets/DotPattern'
 import gsap from 'gsap'
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 const Home = () => {
   const { t } = useTranslation('home')
 
   const ctxWrapper = useRef(null)
   const tl = useRef<any>()
+  const title_tl = useRef<any>()
+
+  let position = 0
+  const roleList = ['UX', 'Designer', 'Editor', 'Front']
+  const [roleText, setRoleText] = useState(t(roleList[roleList.length - 1]))
+
+  const handleChangeRole = () => {
+    setRoleText(t(roleList[position]))
+    position === roleList.length - 1 ? (position = 0) : position++
+  }
 
   useEffect(() => {
     tl.current = gsap.timeline({
       delay: 0.5,
+    })
+
+    title_tl.current = gsap.timeline({
+      delay: 1.5,
+      defaults: {
+        duration: 1,
+      },
+      repeat: -1,
     })
 
     let ctx = gsap.context(() => {
@@ -53,6 +71,32 @@ const Home = () => {
           { opacity: 1, scale: 1, duration: 1, ease: 'elastic.out(0.5,0.5)' },
           '-=0.25',
         )
+
+      title_tl.current
+        .fromTo(
+          '.anim-role',
+          {
+            opacity: 0,
+            rotateX: 45,
+            y: 100,
+          },
+          { y: 0, ease: 'elastic.out(0.7,0.8)', rotateX: 0, opacity: 1 },
+        )
+        .to(
+          '.anim-role',
+          {
+            y: -100,
+            rotateX: -45,
+            opacity: 0,
+            ease: 'elastic.in(0.7,0.8)',
+          },
+          '+=1.5',
+        )
+        .to('.anim-role', {
+          y: 100,
+          duration: 0,
+          onComplete: () => handleChangeRole(),
+        })
     }, ctxWrapper)
 
     return () => ctx.revert()
@@ -79,9 +123,9 @@ const Home = () => {
             <h1 className="anim-title select-none text-nowrap text-center text-4xl font-extrabold text-primary-low sm:text-5xl md:text-6xl lg:text-6xl">
               {t("Hi, I'm Luiz:")}
             </h1>
-            <div className="flex">
-              <h1 className="anim-title select-none text-wrap text-center text-5xl font-extrabold text-primary-dark sm:text-6xl md:text-7xl lg:text-8xl">
-                {t('Frontend Developer')}
+            <div className="relative flex h-[11rem] w-full items-center justify-center overflow-hidden md:h-[8rem]">
+              <h1 className="anim-role select-none text-wrap text-center text-6xl font-extrabold text-primary-dark sm:text-7xl md:text-nowrap md:text-8xl">
+                {roleText}
               </h1>
             </div>
             <span className="anim-phrase mt-3 inline w-fit max-w-[40rem] select-none text-center text-base font-normal sm:text-xl md:text-2xl">

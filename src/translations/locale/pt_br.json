@@ -10,11 +10,11 @@
 
   "home": {
     "Hi, I'm Luiz:": "Oi! Eu sou o Luiz:",
-    "Frontend Developer": "Desenvolvedor Frontend",
-    "UX/UI Designer": "UX/UI Designer",
-    "Graphic Designer": "Designer Gráfico",
-    "Video Editor": "Editor de Vídeo",
-    "catch_phrase": "Independentemente da ferramenta, meu trabalho é dar vida às ideias, criando experiências autênticas e memoráveis.",
+    "Front": "Desenvolvedor Web",
+    "UX": "UX/UI Designer",
+    "Designer": "Designer Gráfico",
+    "Editor": "Editor de Vídeo",
+    "catch_phrase": "Independentemente da função, meu trabalho é dar vida às ideias, criando experiências autênticas e memoráveis.",
     "About me": "Sobre mim",
     "Get in touch": "Entre em contato"
   },

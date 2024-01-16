@@ -10,11 +10,11 @@
 
   "home": {
     "Hi, I'm Luiz:": "Hi! I'm Luiz:",
-    "Frontend Developer": "Frontend Developer",
-    "UX/UI Designer": "UX/UI Designer",
-    "Graphic Designer": "Graphic Designer",
-    "Video Editor": "Video Editor",
-    "catch_phrase": "Regardless of the tool, my job is to bring ideas to life by creating authentic and memorable experiences.",
+    "Front": "Web Developer",
+    "UX": "UX/UI Designer",
+    "Designer": "Graphic Designer",
+    "Editor": "Video Editor",
+    "catch_phrase": "Regardless of the role, my job is to bring ideas to life by creating authentic and memorable experiences.",
     "About me": "About me",
     "Get in touch": "Get in touch"
   },
