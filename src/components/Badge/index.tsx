@@ -20,7 +20,7 @@ const Badge = ({
     <div className="has-tooltip">
       <div
         className={twMerge(
-          'group relative flex size-16 cursor-pointer select-none items-center justify-center gap-4 rounded-full transition-all duration-[125ms] ease-in-out hover:scale-110 active:scale-95',
+          'group relative flex size-16 cursor-pointer select-none items-center justify-center gap-4 rounded-full',
           className,
         )}
         style={{

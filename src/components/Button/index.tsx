@@ -16,7 +16,7 @@ function Button({
       data-disabled={disabled}
       disabled={disabled}
       className={twMerge(
-        'hover:bg-primary-lowlight flex min-h-fit min-w-fit items-center justify-center rounded-xl bg-primary-low px-4 py-3 text-base font-normal text-neutral-white outline-2 transition-colors duration-150 data-[disabled=true]:bg-slate-300 data-[variant=secondary]:bg-neutral-transparent data-[variant=secondary]:text-primary-low data-[variant=secondary]:outline md:text-xl',
+        'flex min-h-fit min-w-fit items-center justify-center rounded-xl bg-primary-low px-4 py-3 text-base font-normal text-neutral-white outline-2 transition-colors duration-150 hover:bg-primary-lowlight data-[disabled=true]:bg-slate-300 data-[variant=secondary]:bg-neutral-transparent data-[variant=secondary]:text-primary-low data-[variant=secondary]:outline md:text-xl',
         className,
       )}
       {...rest}

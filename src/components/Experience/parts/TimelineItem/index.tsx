@@ -12,7 +12,6 @@ const TimelineItem = ({
   skills,
 }: ITimelineItemProps) => {
   const tl = useRef<any>()
-
   const ctxWrapper = useRef<any>(null)
 
   useEffect(() => {
@@ -38,14 +37,19 @@ const TimelineItem = ({
           '.anim-description',
           { opacity: 0 },
           { opacity: 1, y: 0 },
-          '-=0.45',
+          '-=0.55',
         )
         .fromTo(
           '.anim-skill-chip',
           { y: 24, opacity: 0 },
-          { opacity: 1, y: 0, stagger: 0.1, ease: 'power3.out' },
+          { opacity: 1, y: 0, stagger: 0.06, ease: 'power3.out' },
         )
-        .fromTo('.anim-period', { opacity: 0 }, { opacity: 1, y: 0 }, 1)
+        .fromTo(
+          '.anim-period',
+          { opacity: 0, y: 16 },
+          { opacity: 1, y: 0 },
+          '-=1.7',
+        )
     }, ctxWrapper)
     return () => ctx.revert()
   }, [])
@@ -67,7 +71,7 @@ const TimelineItem = ({
             {role}
           </h1>
         </div>
-        <h1 className="anim-description mt-2 text-wrap text-justify text-lg font-normal text-neutral-base">
+        <h1 className="anim-description mt-2 text-wrap text-justify text-base font-normal text-neutral-base md:text-lg">
           {description}
         </h1>
         <div className="flex flex-wrap gap-3 pt-4">

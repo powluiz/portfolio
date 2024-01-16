@@ -13,26 +13,28 @@ const Home = () => {
 
   useEffect(() => {
     tl.current = gsap.timeline({
-      defaults: {
-        y: 32,
-        opacity: 0,
-      },
       delay: 0.5,
     })
 
     let ctx = gsap.context(() => {
       tl.current
-        .from('.anim-social-icon', {
-          duration: 1,
-          stagger: 0.1,
-          ease: 'elastic.out(0.75,0.65)',
-        })
+        .fromTo(
+          '.anim-social-icon',
+          { y: 32, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            stagger: 0.1,
+            ease: 'elastic.out(0.75,0.65)',
+          },
+        )
         .fromTo(
           '.anim-title',
-          { opacity: 0 },
+          { y: 32, opacity: 0 },
           {
-            opacity: 1,
             y: 0,
+            opacity: 1,
             ease: 'power3.out',
             duration: 1,
             stagger: 0.1,
@@ -41,14 +43,14 @@ const Home = () => {
         )
         .fromTo(
           '.anim-phrase',
-          { opacity: 0 },
+          { y: 32, opacity: 0 },
           { opacity: 1, y: 0, duration: 1, ease: 'power3.out' },
           '-=0.75',
         )
         .fromTo(
           '.anim-button',
-          { opacity: 0 },
-          { opacity: 1, y: 0, duration: 1, ease: 'power3.out' },
+          { scale: 0, opacity: 1 },
+          { opacity: 1, scale: 1, duration: 1, ease: 'elastic.out(0.5,0.5)' },
           '-=0.25',
         )
     }, ctxWrapper)
@@ -74,27 +76,32 @@ const Home = () => {
             ))}
           </div>
           <div className="flex min-w-fit flex-col items-center justify-center gap-1">
-            <h1 className="anim-title text-nowrap text-center text-4xl font-extrabold text-primary-low sm:text-5xl md:text-6xl lg:text-6xl">
+            <h1 className="anim-title select-none text-nowrap text-center text-4xl font-extrabold text-primary-low sm:text-5xl md:text-6xl lg:text-6xl">
               {t("Hi, I'm Luiz:")}
             </h1>
             <div className="flex">
-              <h1 className="anim-title text-wrap text-center text-5xl font-extrabold text-primary-dark sm:text-6xl md:text-7xl">
+              <h1 className="anim-title select-none text-wrap text-center text-5xl font-extrabold text-primary-dark sm:text-6xl md:text-7xl lg:text-8xl">
                 {t('Frontend Developer')}
               </h1>
             </div>
-            <span className="anim-phrase mt-3 inline w-fit max-w-[36rem] text-center text-base font-normal sm:text-xl md:text-2xl">
+            <span className="anim-phrase mt-3 inline w-fit max-w-[40rem] select-none text-center text-base font-normal sm:text-xl md:text-2xl">
               {t('catch_phrase')}
             </span>
           </div>
           <a className="anim-button" href="#section-contact">
-            <Button className="rounded-full px-8 py-4" onClick={() => {}}>
-              <h3 className="text-lg">{t('Get in touch')}</h3>
+            <Button
+              className="with-border-anim mt-4 rounded-none px-8 py-4"
+              onClick={() => {}}
+            >
+              <h3 className="with-border-content text-lg">
+                {t('Get in touch')}
+              </h3>
             </Button>
           </a>
         </div>
       </div>
       <DotPattern className="absolute right-[10%] top-[10%] z-0 animate-wiggle-pos opacity-30" />
-      <div className="home-gradient absolute z-[-10] h-full w-full opacity-85" />
+      <div className="home-gradient absolute z-[-10] h-full w-full opacity-55" />
     </div>
   )
 }
