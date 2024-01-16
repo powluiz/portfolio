@@ -30,7 +30,7 @@ export const socialLinks = [
   {
     name: 'Github',
     icon: <GithubIcon color="#657792" />,
-    url: 'https://github.com/luiz1303',
+    url: 'https://github.com/powluiz',
   },
   {
     name: 'Instagram',

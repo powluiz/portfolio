@@ -6,8 +6,6 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import 'react-toastify/dist/ReactToastify.css'
 import HomePage from './pages/HomePage'
 import NotFound from './pages/NotFound'
-import { useEffect } from 'react'
-import { toast } from 'react-toastify'
 
 const router = createBrowserRouter([
   {
@@ -21,9 +19,6 @@ const router = createBrowserRouter([
 ])
 
 const App = () => {
-  useEffect(() => {
-    toast.info('Ops, this website is still under development. Come back later!')
-  }, [])
   return (
     <>
       <Toast />

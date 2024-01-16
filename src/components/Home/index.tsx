@@ -3,28 +3,54 @@ import { Button, NavBar } from '..'
 import { socialLinks } from '@/utils/constants'
 import DotPattern from '@/assets/DotPattern'
 import gsap from 'gsap'
-import { useLayoutEffect, useRef } from 'react'
-import HeroIllustration from '@/assets/HeroIllustration'
+import { useEffect, useRef } from 'react'
 
 const Home = () => {
   const { t } = useTranslation('home')
 
   const ctxWrapper = useRef(null)
-  const tl = gsap.timeline({
-    defaults: {
-      y: 32,
-      opacity: 0,
-    },
-    delay: 0.5,
-  })
+  const tl = useRef<any>()
 
-  useLayoutEffect(() => {
+  useEffect(() => {
+    tl.current = gsap.timeline({
+      defaults: {
+        y: 32,
+        opacity: 0,
+      },
+      delay: 0.5,
+    })
+
     let ctx = gsap.context(() => {
-      tl.from('.social-icon', {
-        duration: 1,
-        stagger: 0.1,
-        ease: 'elastic.out(0.75,0.65)',
-      })
+      tl.current
+        .from('.anim-social-icon', {
+          duration: 1,
+          stagger: 0.1,
+          ease: 'elastic.out(0.75,0.65)',
+        })
+        .fromTo(
+          '.anim-title',
+          { opacity: 0 },
+          {
+            opacity: 1,
+            y: 0,
+            ease: 'power3.out',
+            duration: 1,
+            stagger: 0.1,
+          },
+          '-=0.45',
+        )
+        .fromTo(
+          '.anim-phrase',
+          { opacity: 0 },
+          { opacity: 1, y: 0, duration: 1, ease: 'power3.out' },
+          '-=0.75',
+        )
+        .fromTo(
+          '.anim-button',
+          { opacity: 0 },
+          { opacity: 1, y: 0, duration: 1, ease: 'power3.out' },
+          '-=0.25',
+        )
     }, ctxWrapper)
 
     return () => ctx.revert()
@@ -34,58 +60,37 @@ const Home = () => {
     <div id="section-home" ref={ctxWrapper} className="section-wrapper">
       <NavBar showLangSelector />
       <div className="content-wrapper flex h-dvh min-h-fit w-full flex-col items-center justify-center gap-8 md:flex-row md:justify-between">
-        {/* left part */}
-        <div className="mt-12 flex h-fit w-full flex-col items-start justify-center gap-4 md:mt-0 lg:gap-6">
+        <div className="mt-16 flex h-fit w-full flex-col items-center justify-center gap-4 lg:gap-6">
           <div className="flex w-fit items-center justify-center gap-3">
             {socialLinks?.map(link => (
               <a
                 key={`link-${link?.url}`}
                 href={link?.url}
                 target="_blank"
-                className="social-icon hover:-translate-y-1 hover:brightness-[0.83]"
+                className="anim-social-icon hover:brightness-125"
               >
                 {link?.icon}
               </a>
             ))}
           </div>
-          <div className="flex min-w-fit flex-col gap-1">
-            <h1 className="text-nowrap text-3xl font-extrabold text-primary-low md:text-5xl lg:text-6xl">
+          <div className="flex min-w-fit flex-col items-center justify-center gap-1">
+            <h1 className="anim-title text-nowrap text-center text-4xl font-extrabold text-primary-low sm:text-5xl md:text-6xl lg:text-6xl">
               {t("Hi, I'm Luiz:")}
             </h1>
             <div className="flex">
-              <h1 className="text-wrap text-3xl font-extrabold text-primary-dark md:text-nowrap md:text-5xl lg:text-6xl">
+              <h1 className="anim-title text-wrap text-center text-5xl font-extrabold text-primary-dark sm:text-6xl md:text-7xl">
                 {t('Frontend Developer')}
               </h1>
             </div>
-            <span className="w-fit">
-              <span className="inline text-base font-normal md:text-lg lg:text-xl">
-                {t('My job is to turn')}
-              </span>
-              <span className="inline text-base font-semibold md:text-lg lg:text-xl">
-                {t('ideas')}
-              </span>
-              <span className="inline text-base font-normal md:text-lg lg:text-xl">
-                {t('into')}
-              </span>
-              <span className="inline text-base font-semibold md:text-lg lg:text-xl">
-                {t('meaningful experiences')}
-              </span>
+            <span className="anim-phrase mt-3 inline w-fit max-w-[36rem] text-center text-base font-normal sm:text-xl md:text-2xl">
+              {t('catch_phrase')}
             </span>
           </div>
-          <div className="flex gap-6">
-            <a href="#section-contact">
-              <Button className="rounded-full px-8" onClick={() => {}}>
-                <h3 className="text-base">{t('Get in touch')}</h3>
-              </Button>
-            </a>
-          </div>
-        </div>
-
-        {/* right part */}
-        <div className="relative hidden h-fit w-full items-center justify-center lg:flex">
-          <div className="z-10 mx-auto w-[80%] max-w-[25rem] md:w-60 lg:flex lg:w-full">
-            <HeroIllustration />
-          </div>
+          <a className="anim-button" href="#section-contact">
+            <Button className="rounded-full px-8 py-4" onClick={() => {}}>
+              <h3 className="text-lg">{t('Get in touch')}</h3>
+            </Button>
+          </a>
         </div>
       </div>
       <DotPattern className="absolute right-[10%] top-[10%] z-0 animate-wiggle-pos opacity-30" />
