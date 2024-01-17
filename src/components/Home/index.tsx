@@ -4,6 +4,7 @@ import { socialLinks } from '@/utils/constants'
 import DotPattern from '@/assets/DotPattern'
 import gsap from 'gsap'
 import { useEffect, useRef, useState } from 'react'
+import i18n from '@/translations/i18n'
 
 const Home = () => {
   const { t } = useTranslation('home')
@@ -12,14 +13,21 @@ const Home = () => {
   const tl = useRef<any>()
   const title_tl = useRef<any>()
 
-  let position = 0
   const roleList = ['UX', 'Designer', 'Editor', 'Front']
-  const [roleText, setRoleText] = useState(t(roleList[roleList.length - 1]))
+  const positionRef = useRef(roleList.length - 1)
+
+  const [roleText, setRoleText] = useState(t(roleList[positionRef.current]))
 
   const handleChangeRole = () => {
-    setRoleText(t(roleList[position]))
-    position === roleList.length - 1 ? (position = 0) : position++
+    positionRef.current === roleList.length - 1
+      ? (positionRef.current = 0)
+      : positionRef.current++
+    setRoleText(t(roleList[positionRef.current]))
   }
+
+  i18n.on('languageChanged', () => {
+    setRoleText(t(roleList[positionRef.current]))
+  })
 
   useEffect(() => {
     tl.current = gsap.timeline({
