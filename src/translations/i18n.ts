@@ -32,7 +32,11 @@ export const handleChangeLanguage = (
   option: ILanguageProps,
   event?: React.ChangeEvent<HTMLSelectElement>,
 ) => {
-  event
-    ? i18n.changeLanguage(event?.target?.value)
-    : i18n.changeLanguage(option?.value)
+  if (event) {
+    event.preventDefault()
+    i18n.changeLanguage(event?.target?.value)
+  } else {
+    i18n.changeLanguage(option?.value)
+  }
+  localStorage.setItem('lang', i18n.language)
 }

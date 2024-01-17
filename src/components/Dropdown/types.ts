@@ -8,6 +8,7 @@ export interface IDropdownOption {
 export interface IDropdownProps {
   icon?: IconDefinition
   options: IDropdownOption[]
+  initialValue?: IDropdownOption
   onChange?: (value: any) => void
   className?: string
   position?: 'left' | 'right'

@@ -98,7 +98,7 @@ const Home = () => {
             opacity: 0,
             ease: 'elastic.in(0.7,0.8)',
           },
-          '+=1.5',
+          '+=1',
         )
         .to('.anim-role', {
           y: 100,
@@ -128,11 +128,11 @@ const Home = () => {
             ))}
           </div>
           <div className="flex min-w-fit flex-col items-center justify-center gap-1">
-            <h1 className="anim-title select-none text-nowrap text-center text-4xl font-extrabold text-primary-low sm:text-5xl md:text-6xl lg:text-6xl">
+            <h1 className="anim-title select-none  text-center text-3xl font-extrabold text-primary-low sm:text-5xl md:text-6xl lg:text-6xl">
               {t("Hi, I'm Luiz:")}
             </h1>
-            <div className="relative flex h-[11rem] w-full items-center justify-center overflow-hidden md:h-[8rem]">
-              <h1 className="anim-role select-none text-wrap text-center text-6xl font-extrabold text-primary-dark sm:text-7xl md:text-nowrap md:text-8xl">
+            <div className="relative flex h-[6.2rem] w-full items-center justify-center overflow-hidden sm:h-[11rem] md:h-[8rem]">
+              <h1 className="anim-role w-full select-none text-wrap break-words text-center text-[40px] font-extrabold leading-[2.5rem] text-primary-dark sm:text-7xl md:text-nowrap lg:text-8xl">
                 {roleText}
               </h1>
             </div>

@@ -7,19 +7,32 @@ import ReactDOM from 'react-dom'
 
 const Dropdown = ({
   options,
+  initialValue,
   onChange,
   className,
   innerWidth,
   position,
   icon,
 }: IDropdownProps) => {
-  const [activeOption, setActiveOption] = useState<IDropdownOption>(options[0])
+  const [activeOption, setActiveOption] = useState<IDropdownOption>(
+    initialValue || {
+      label: '',
+      value: '',
+    },
+  )
+
   const [isOpen, setIsOpen] = useState(false)
   const innerRef = useRef(null)
   const dropdownWrapper = useRef<any>(null)
   const [side, setSide] = useState<'left' | 'right'>(position || 'left')
 
   const tl = useRef<any>()
+
+  useEffect(() => {
+    if (initialValue) {
+      setActiveOption(initialValue)
+    }
+  }, [initialValue])
 
   useEffect(() => {
     tl.current = gsap.timeline({

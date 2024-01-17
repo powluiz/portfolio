@@ -6,6 +6,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import 'react-toastify/dist/ReactToastify.css'
 import HomePage from './pages/HomePage'
 import NotFound from './pages/NotFound'
+import i18n from '@/translations/i18n'
+import { useEffect } from 'react'
 
 const router = createBrowserRouter([
   {
@@ -19,6 +21,13 @@ const router = createBrowserRouter([
 ])
 
 const App = () => {
+  useEffect(() => {
+    const storedLang = localStorage.getItem('lang')
+    if (storedLang) {
+      i18n.changeLanguage(storedLang)
+    }
+  }, [])
+
   return (
     <>
       <Toast />
