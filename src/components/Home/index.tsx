@@ -112,7 +112,7 @@ const Home = () => {
   return (
     <div id="section-home" ref={ctxWrapper} className="section-wrapper">
       <NavBar showLangSelector />
-      <div className="content-wrapper flex h-dvh min-h-fit w-full flex-col items-center justify-center gap-8 md:flex-row md:justify-between">
+      <div className="content-wrapper flex h-svh min-h-fit w-full flex-col items-center justify-center gap-8 md:flex-row md:justify-between">
         <div className="mt-16 flex h-fit w-full flex-col items-center justify-center gap-4 lg:gap-6">
           <div className="flex w-fit items-center justify-center gap-3">
             {socialLinks?.map(link => (
