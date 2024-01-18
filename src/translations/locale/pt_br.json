@@ -37,7 +37,7 @@
 
   "about": {
     "About me": "Sobre mim",
-    "AboutText": "Sou o Luiz, desenvolvedor Web Front-End e estudante de Engenharia da Computação na Universidade Tecnológica Federal do Paraná. Apaixonado por design e tecnologia, dedico um tempo significativo para aprofundar e expandir meus conhecimentos nessas áreas. Como entusiasta da música que adora de instrumentos musicais, descobri minha veia criativa desde cedo, quando comecei a atuar como freelancer com design gráfico, edição e motion. Vivo em constante processo de aperfeiçoamento e busco ativamente novas capacidades para me tornar um profissional mais versátil.",
+    "AboutText": "Sou o Luiz, desenvolvedor Web Front-End e estudante de Engenharia da Computação na Universidade Tecnológica Federal do Paraná. Apaixonado por design e tecnologia, dedico um tempo significativo para aprofundar e expandir meus conhecimentos nessas áreas. Descobri minha veia criativa desde cedo, quando comecei a atuar com design gráfico, edição e motion como freelancer. Desde então, vivo em constante processo de aperfeiçoamento para me tornar um profissional mais versátil.",
 
     "Tools and Technologies": "Ferramentas e Tecnologias",
     "ToolsText": "Gosto de explorar novas ferramentas e estou sempre em busca de me especializar em algo novo. Abaixo, você pode conferir algumas das tecnologias que já utilizei em projetos pessoais e profissionais.",
@@ -51,12 +51,7 @@
 
   "experience": {
     "Experience": "Experiência",
-    "ExperienceText": "Role para ver experiências anteriores.",
-    "PRESENT": "PRESENTE",
-
-    "NEES": "Centro de Excelência em Tecnologias Sociais",
-    "Role": "Engenheiro de Software Frontend",
-    "Description": "BR - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    "ExperienceText": "Role para ver experiências anteriores."
   },
 
   "contact": {

@@ -37,7 +37,7 @@
 
   "about": {
     "About me": "About me",
-    "AboutText": "I'm Luiz, a Front-End Web developer currently studying Computer Engineering at the Federal Technological University of Paraná. Passionate about design and technology, I invest significant time in enhancing my expertise in these areas. A music enthusiast with a love for instruments, I uncovered my creative side early when a started freelancing in graphic design, editing, and motion. I live in a constant process of improvement and actively seek new skills to become a more versatile professional.",
+    "AboutText": "I'm Luiz, a Front-End Web developer and Computer Engineering student at the Federal Technological University of Paraná. Passionate about design and technology, I invest a substantial amount of time to delve deeper and broaden my knowledge in these fields. I discovered my creative side early on when I began freelancing in graphic design, editing, and motion. Since then, I've been on a continuous journey of improvement, striving to become a more versatile professional.",
 
     "Tools and Technologies": "Tools and Technologies",
     "ToolsText": "I enjoy exploring new tools and I'm always seeking to specialize in something new. Below, you can check out some of the technologies I have already used in personal and professional projects.",
@@ -51,12 +51,7 @@
 
   "experience": {
     "Experience": "Experience",
-    "ExperienceText": "Scroll to see past experiences.",
-    "PRESENT": "PRESENT",
-
-    "NEES": "Center for Excellence in Social Technologies",
-    "Role": "Frontend Software Engineer",
-    "Description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    "ExperienceText": "Scroll to see past experiences."
   },
 
   "contact": {

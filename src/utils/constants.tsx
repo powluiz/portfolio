@@ -301,9 +301,9 @@ export const experienceList: IExperienceItem[] = [
     },
     description: {
       en_us:
-        'I served as a Front-End Web Developer at the Center of Excellence in Social Technologies. Throughout my tenure, I actively collaborated with the front-end team and engaged in cross-functional cooperation with other teams on various initiatives. Key responsibilities included: Developing and maintaining responsive interfaces using Figma prototypes, updating the Design System to DSGov standards, utilizing REST APIs to ensure seamless client-server integration, and implementing version control and code reviews through Bitbucket.',
+        'I served as a Front-End Web Developer at the Center of Excellence in Social Technologies. I actively collaborated with the front-end team and engaged in cross-functional cooperation with other teams on various initiatives. Key responsibilities included: Developing and maintaining responsive interfaces using Figma prototypes, updating the Design System to DSGov standards, utilizing REST APIs to ensure seamless client-server integration, and implementing version control and code reviews through Bitbucket.',
       pt_br:
-        'Atuei como Desenvolvedor Web Front-End no Núcleo de Excelência em Tecnologias Sociais. Durante meu período lá, integrei a equipe de front e colaborei com outros times em diversas atividades. Entre elas, destacam-se: Desenvolvimento e manutenção de interfaces responsivas com base em protótipos do Figma, atualização de Design System nos padrões do DSGov, consumo de APIs REST para garantir uma integração cliente-servidor efetiva, controle de versionamento e revisão de código com Bitbucket.',
+        'Atuei como Desenvolvedor Web Front-End no Núcleo de Excelência em Tecnologias Sociais, onde integrei a equipe de front e colaborei com outros times em diversas atividades. Entre elas, destacam-se: Desenvolvimento e manutenção de interfaces responsivas com base em protótipos do Figma, atualização de Design System nos padrões do DSGov, consumo de APIs REST para garantir uma integração cliente-servidor efetiva, controle de versionamento e revisão de código com Bitbucket.',
     },
     skills: [
       'React',
@@ -395,7 +395,7 @@ export const experienceList: IExperienceItem[] = [
     },
     description: {
       en_us:
-        'I started my career as a freelancer in projects involving design, editing, and motion. During this period, I was responsible for producing graphic materials and audiovisual solutions for various products, events, and advertising campaigns.',
+        'I started my career as a freelancer in projects involving design, editing, and motion. During this period, I was responsible for producing graphic materials and audiovisual solutions for products, events, and advertising campaigns.',
       pt_br:
         'Iniciei minha carreira como freelancer em projetos com design, edição e motion. Durante este período, fui responsável pela produção de materiais gráficos e soluções audiovisuais para diversos produtos, eventos e campanhas publicitárias.',
     },
