@@ -3,7 +3,7 @@ import renderParticle, { IParticleProps } from './parts/particle'
 
 export interface IParticleBackgroundProps {
   className?: string
-  particleSize?: number
+  particleSize?: number | 'random'
   particleColor?: string
   particleGap?: number
   backgroundColor?: string
@@ -16,7 +16,13 @@ const ParticleBackground = ({
   particleGap,
   backgroundColor,
 }: IParticleBackgroundProps) => {
-  const gap = particleGap || 20
+  const gap = particleGap || 24
+  const mouseRadius = 12000
+  const friction = 0.96
+  const ease = 0.2
+  const randomLimiter = 0.5
+  const randomsizeMultiplier = 3.6
+
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const [particles, setParticles] = useState<IParticleProps[]>([])
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -33,7 +39,13 @@ const ParticleBackground = ({
           originY: j,
           xPos: i,
           yPos: j,
-          size: particleSize,
+          size:
+            particleSize === 'random'
+              ? Math.floor(
+                  (randomLimiter + randomLimiter * Math.random()) *
+                    randomsizeMultiplier,
+                )
+              : particleSize,
           color: particleColor,
           context: context,
         }
@@ -43,12 +55,38 @@ const ParticleBackground = ({
     }
   }
 
+  const interactWithParticles = () => {
+    const newParticles = particles.map(particle => {
+      const dx = particle.xPos - mousePosition.x
+      const dy = particle.yPos - mousePosition.y
+      const squareDistance = dx * dx + dy * dy
+      const force = mouseRadius / squareDistance
+      let velocityX = 0
+      let velocityY = 0
+
+      if (squareDistance < mouseRadius) {
+        const angle = Math.atan2(dy, dx)
+        velocityX = force * Math.cos(angle)
+        velocityY = force * Math.sin(angle)
+      }
+
+      particle.xPos +=
+        velocityX * friction + (particle.originX - particle.xPos) * ease
+      particle.yPos +=
+        velocityY * friction + (particle.originY - particle.yPos) * ease
+
+      return particle
+    })
+
+    setParticles(newParticles)
+  }
+
   const clearCanvas = (ctx: CanvasRenderingContext2D) => {
-    setParticles([])
     ctx.clearRect(0, 0, windowSize.width, windowSize.height)
   }
 
   const updateCanvas = useCallback(() => {
+    clearCanvas(canvasRef.current?.getContext('2d') as CanvasRenderingContext2D)
     particles?.forEach(particle => {
       renderParticle(particle)
     })
@@ -84,10 +122,11 @@ const ParticleBackground = ({
         width: newWidth,
         height: newHeight,
       })
+      setParticles([])
     }
 
     if (!!canvas) {
-      handleResize() // define canvas size on mount
+      handleResize() // resizes on mount
       canvas.style.backgroundColor = backgroundColor || 'black'
     }
 
@@ -108,7 +147,7 @@ const ParticleBackground = ({
   }, [windowSize])
 
   useEffect(() => {
-    // console.log(mousePosition)
+    interactWithParticles()
   }, [mousePosition])
 
   return <canvas ref={canvasRef} className={className} />

@@ -153,8 +153,8 @@ const Home = () => {
       </div>
       <ParticleBackground
         backgroundColor="transparent"
-        particleSize={1.5}
-        className="absolute left-0 top-0 z-[-8] h-svh w-full opacity-30"
+        particleSize="random"
+        className="absolute left-0 top-0 z-[-8] h-svh w-full opacity-20"
       />
       <div className="home-gradient absolute z-[-10] h-full w-full opacity-55" />
     </div>
