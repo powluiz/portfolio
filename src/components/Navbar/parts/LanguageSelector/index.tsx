@@ -4,7 +4,7 @@ import i18n, {
   LANGUAGES,
   handleChangeLanguage,
 } from '@/translations/i18n'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const LanguageSelector = () => {
   const [currentLanguage, setLanguage] = useState<ILanguageProps>({
@@ -20,6 +20,10 @@ const LanguageSelector = () => {
     const languageObject: ILanguageProps = foundLanguage || LANGUAGES[0]
     setLanguage(languageObject)
   }
+
+  useEffect(() => {
+    updateSelector()
+  }, [])
 
   i18n.on('languageChanged', () => {
     updateSelector()
