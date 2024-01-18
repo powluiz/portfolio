@@ -115,7 +115,7 @@ const Skills = () => {
           />
         </div>
       </div>
-      <DotPattern className="absolute left-[4.5rem] top-[-6rem] z-[1] animate-wiggle-pos opacity-30 md:opacity-45" />
+      <DotPattern className="absolute left-[-2rem] top-[4rem] z-[1] animate-wiggle-pos opacity-30 md:opacity-45" />
       <DotPattern className="absolute bottom-[-6rem] right-[2rem] z-[1] animate-wiggle-pos opacity-20 md:opacity-45" />
     </div>
   )

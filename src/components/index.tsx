@@ -13,6 +13,7 @@ import Badge from './Badge'
 import Logo from './Logo'
 import ScrollTop from './ScrollTop'
 import Toast from './Toast'
+import ParticleBackground from './ParticleBackground'
 
 export {
   About,
@@ -30,4 +31,5 @@ export {
   Logo,
   ScrollTop,
   Toast,
+  ParticleBackground,
 }

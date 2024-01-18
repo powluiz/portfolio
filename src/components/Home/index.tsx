@@ -1,7 +1,6 @@
 import { useTranslation } from 'react-i18next'
-import { Button, NavBar } from '..'
+import { Button, NavBar, ParticleBackground } from '..'
 import { socialLinks } from '@/utils/constants'
-import DotPattern from '@/assets/DotPattern'
 import gsap from 'gsap'
 import { useEffect, useRef, useState } from 'react'
 import i18n from '@/translations/i18n'
@@ -152,7 +151,11 @@ const Home = () => {
           </a>
         </div>
       </div>
-      <DotPattern className="absolute right-[10%] top-[10%] z-0 animate-wiggle-pos opacity-30" />
+      <ParticleBackground
+        backgroundColor="transparent"
+        particleSize={1.5}
+        className="absolute left-0 top-0 z-[-8] h-svh w-full opacity-30"
+      />
       <div className="home-gradient absolute z-[-10] h-full w-full opacity-55" />
     </div>
   )
