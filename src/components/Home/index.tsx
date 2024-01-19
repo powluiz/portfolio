@@ -110,51 +110,51 @@ const Home = () => {
   }, [])
 
   return (
-    <div id="section-home" ref={ctxWrapper} className="section-wrapper">
+    <div
+      id="section-home"
+      ref={ctxWrapper}
+      className="relative flex h-svh flex-col"
+    >
       <NavBar showLangSelector />
-      <div className="content-wrapper flex h-svh min-h-fit w-full flex-col items-center justify-center gap-8 md:flex-row md:justify-between">
-        <div className="mt-16 flex h-fit w-full flex-col items-center justify-center gap-4 lg:gap-6">
-          <div className="flex w-fit items-center justify-center gap-3">
-            {socialLinks?.map(link => (
-              <a
-                key={`link-${link?.url}`}
-                href={link?.url}
-                target="_blank"
-                className="anim-social-icon hover:brightness-125"
-              >
-                {link?.icon}
-              </a>
-            ))}
-          </div>
-          <div className="flex min-w-fit flex-col items-center justify-center gap-1">
-            <h1 className="anim-title select-none  text-center text-3xl font-extrabold text-primary-low sm:text-5xl md:text-6xl lg:text-6xl">
-              {t("Hi, I'm Luiz:")}
-            </h1>
-            <div className="relative flex h-[6.2rem] w-full items-center justify-center overflow-hidden sm:h-[11rem] md:h-[8rem]">
-              <h1 className="anim-role w-full select-none text-wrap break-words text-center text-[40px] font-extrabold leading-[2.5rem] text-primary-dark sm:text-7xl md:text-nowrap lg:text-8xl">
-                {roleText}
-              </h1>
-            </div>
-            <span className="anim-phrase mt-3 inline w-fit max-w-[40rem] select-none text-center text-base font-normal sm:text-xl md:text-2xl">
-              {t('catch_phrase')}
-            </span>
-          </div>
-          <a className="anim-button" href="#section-contact">
-            <Button
-              className="with-border-anim mt-4 rounded-none px-8 py-4"
-              onClick={() => {}}
+      <div className="mt-[3rem] flex w-full flex-1 flex-col items-center justify-center gap-4 px-8 lg:mt-[4rem] lg:gap-6 lg:px-16">
+        <div className="flex w-fit items-center justify-center gap-3">
+          {socialLinks?.map(link => (
+            <a
+              key={`link-${link?.url}`}
+              href={link?.url}
+              target="_blank"
+              className="anim-social-icon hover:brightness-125"
             >
-              <h3 className="with-border-content text-lg">
-                {t('Get in touch')}
-              </h3>
-            </Button>
-          </a>
+              {link?.icon}
+            </a>
+          ))}
         </div>
+        <div className="flex min-w-fit flex-col items-center justify-center gap-1">
+          <h1 className="anim-title select-none  text-center text-3xl font-extrabold text-primary-low sm:text-5xl md:text-6xl lg:text-6xl">
+            {t("Hi, I'm Luiz:")}
+          </h1>
+          <div className="relative flex h-[6.2rem] w-full items-center justify-center overflow-hidden sm:h-[11rem] md:h-[8rem]">
+            <h1 className="anim-role w-full select-none text-wrap break-words text-center text-[40px] font-extrabold leading-[2.5rem] text-primary-dark sm:text-7xl md:text-nowrap lg:text-8xl">
+              {roleText}
+            </h1>
+          </div>
+          <span className="anim-phrase mt-3 inline w-fit max-w-[40rem] select-none text-center text-base font-normal sm:text-xl md:text-2xl">
+            {t('catch_phrase')}
+          </span>
+        </div>
+        <a className="anim-button" href="#section-contact">
+          <Button
+            className="with-border-anim mt-4 rounded-none px-8 py-4"
+            onClick={() => {}}
+          >
+            <h3 className="with-border-content text-lg">{t('Get in touch')}</h3>
+          </Button>
+        </a>
       </div>
       <ParticleBackground
         backgroundColor="transparent"
         particleSize="random"
-        className="absolute left-0 top-0 z-[-8] h-svh w-full opacity-20"
+        className="absolute left-0 top-0 z-[-8] h-full w-full opacity-20"
       />
       <div className="home-gradient absolute z-[-10] h-full w-full opacity-55" />
     </div>

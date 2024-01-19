@@ -50,7 +50,7 @@ const NavBar = ({ showLangSelector = false }: INavbarProps) => {
   return (
     <nav
       ref={ctxWrapper}
-      className="absolute top-0 z-50 flex h-fit w-full select-none items-center justify-between bg-neutral-transparent px-8 py-10 lg:px-[4.75rem] lg:py-16"
+      className="absolute top-0 z-50 flex h-[6rem] w-full select-none items-center justify-between bg-neutral-transparent px-8 lg:h-[8rem] lg:px-[4.75rem]"
     >
       <Logo size={isLargerThanMd ? 'lg' : 'md'} />
       <div className="hidden items-center justify-center md:gap-2 lg:flex xl:gap-6">
