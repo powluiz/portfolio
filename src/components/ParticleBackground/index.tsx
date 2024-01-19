@@ -17,19 +17,30 @@ const ParticleBackground = ({
   backgroundColor,
 }: IParticleBackgroundProps) => {
   const gap = particleGap || 24
-  const mouseRadius = 12000
+  const mouseRadius = 30000
   const friction = 0.96
   const ease = 0.2
-  const randomLimiter = 0.5
-  const randomsizeMultiplier = 3.6
 
   const canvasRef = useRef<HTMLCanvasElement>(null)
   const [particles, setParticles] = useState<IParticleProps[]>([])
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [windowSize, setWindowSize] = useState({
-    width: window.innerWidth * window.devicePixelRatio,
-    height: window.innerHeight * window.devicePixelRatio,
+    width: 0,
+    height: 0,
   })
+
+  const getParticleSize = particleSize => {
+    const minSize = 0.5
+    const multiplier = 3.6
+
+    if (particleSize === 'random') {
+      return (minSize + Math.random() * minSize) * multiplier
+    } else if (typeof particleSize === 'number') {
+      return particleSize
+    } else {
+      return minSize
+    }
+  }
 
   const initParticles = (context: CanvasRenderingContext2D) => {
     for (let i = 0; i < windowSize.width; i += gap) {
@@ -39,13 +50,8 @@ const ParticleBackground = ({
           originY: j,
           xPos: i,
           yPos: j,
-          size:
-            particleSize === 'random'
-              ? Math.floor(
-                  (randomLimiter + randomLimiter * Math.random()) *
-                    randomsizeMultiplier,
-                )
-              : particleSize,
+          size: getParticleSize(particleSize),
+
           color: particleColor,
           context: context,
         }
@@ -114,8 +120,6 @@ const ParticleBackground = ({
       if (!!canvas) {
         canvas.width = newWidth
         canvas.height = newHeight
-        canvas.style.width = `${window.innerWidth}px`
-        canvas.style.height = `${window.innerHeight}px`
       }
 
       setWindowSize({
