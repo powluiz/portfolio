@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
 import renderParticle, { IParticleProps } from './parts/particle'
+import { throttle } from 'lodash'
 
 export interface IParticleBackgroundProps {
   className?: string
@@ -43,6 +44,8 @@ const ParticleBackground = ({
   }
 
   const initParticles = (context: CanvasRenderingContext2D) => {
+    const particles: IParticleProps[] = []
+
     for (let i = 0; i < windowSize.width; i += gap) {
       for (let j = 0; j < windowSize.height; j += gap) {
         const newParticle: IParticleProps = {
@@ -51,14 +54,14 @@ const ParticleBackground = ({
           xPos: i,
           yPos: j,
           size: getParticleSize(particleSize),
-
           color: particleColor,
           context: context,
         }
 
-        setParticles(prev => [...prev, newParticle])
+        particles.push(newParticle)
       }
     }
+    setParticles(particles)
   }
 
   const interactWithParticles = () => {
@@ -87,12 +90,13 @@ const ParticleBackground = ({
     setParticles(newParticles)
   }
 
-  const clearCanvas = (ctx: CanvasRenderingContext2D) => {
-    ctx.clearRect(0, 0, windowSize.width, windowSize.height)
+  const clearCanvas = () => {
+    const ctx = canvasRef.current?.getContext('2d') as CanvasRenderingContext2D
+    !!ctx && ctx.clearRect(0, 0, windowSize.width, windowSize.height)
   }
 
   const updateCanvas = useCallback(() => {
-    clearCanvas(canvasRef.current?.getContext('2d') as CanvasRenderingContext2D)
+    clearCanvas()
     particles?.forEach(particle => {
       renderParticle(particle)
     })
@@ -104,14 +108,13 @@ const ParticleBackground = ({
 
   useEffect(() => {
     const canvas = canvasRef.current
-    const ctx = canvas?.getContext('2d')
 
-    const handleMouseMovement = (event: MouseEvent) => {
+    const handleMouseMovement = throttle((event: MouseEvent) => {
       setMousePosition({
         x: event.clientX * window.devicePixelRatio,
         y: event.pageY * window.devicePixelRatio,
       })
-    }
+    }, 20)
 
     const handleResize = () => {
       const newWidth = window.innerWidth * window.devicePixelRatio
@@ -140,14 +143,14 @@ const ParticleBackground = ({
     return () => {
       window.removeEventListener('mousemove', handleMouseMovement)
       window.removeEventListener('resize', handleResize)
-      !!ctx && clearCanvas(ctx)
+      clearCanvas()
     }
   }, [])
 
   useEffect(() => {
-    const context = canvasRef.current?.getContext('2d')
-    clearCanvas(context as CanvasRenderingContext2D)
-    initParticles(context as CanvasRenderingContext2D)
+    const ctx = canvasRef.current?.getContext('2d') as CanvasRenderingContext2D
+    clearCanvas()
+    initParticles(ctx)
   }, [windowSize])
 
   useEffect(() => {
