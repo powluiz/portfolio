@@ -1,6 +1,6 @@
 import { Icon } from '..'
 import { IDropdownOption, IDropdownProps } from './types'
-import { useEffect, useLayoutEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 import gsap from 'gsap'
 import ReactDOM from 'react-dom'
@@ -51,7 +51,7 @@ const Dropdown = ({
     isOpen ? tl.current.play() : tl.current.reverse()
   }, [isOpen])
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     // check if dropdown is out of screen
     const checkBoundaries = () => {
       const nodeRef = ReactDOM.findDOMNode(innerRef?.current)
@@ -73,11 +73,11 @@ const Dropdown = ({
 
     checkBoundaries()
 
-    document.addEventListener('resize', checkBoundaries)
-    document.addEventListener('mousedown', handleClickOutside)
+    window.addEventListener('resize', checkBoundaries)
+    window.addEventListener('mousedown', handleClickOutside)
     return () => {
-      document.removeEventListener('resize', checkBoundaries)
-      document.removeEventListener('mousedown', handleClickOutside)
+      window.removeEventListener('resize', checkBoundaries)
+      window.removeEventListener('mousedown', handleClickOutside)
     }
   }, [])
 

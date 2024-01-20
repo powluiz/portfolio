@@ -60,11 +60,11 @@ export const pageLinks = [
     label: 'About',
     to: '#section-about',
   },
-  {
-    isInternal: true,
-    label: 'Projects',
-    to: '#section-projects',
-  },
+  // {
+  //   isInternal: true,
+  //   label: 'Projects',
+  //   to: '#section-projects',
+  // },
   {
     isInternal: true,
     label: 'Experience',
