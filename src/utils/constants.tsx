@@ -408,3 +408,5 @@ export const experienceList: IExperienceItem[] = [
     ],
   },
 ]
+
+export const EMAIL_ADDRESS = 'luiz.1303@hotmail.com'

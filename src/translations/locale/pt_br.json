@@ -71,5 +71,18 @@
     "submit": "Enviar",
     "send-success-message": "Sua mensagem foi enviada.",
     "send-error-message": "Algo deu errado. Tente novamente."
+  },
+
+  "footer": {
+    "social-media": "REDES SOCIAIS",
+    "sections": "SEÇÕES",
+    "contact-info": "CONTATO",
+    "lang": "IDIOMA",
+    "Home": "HOME",
+    "About": "SOBRE",
+    "Skills": "HABILIDADES",
+    "Projects": "PROJETOS",
+    "Experience": "EXPERIÊNCIA",
+    "Contact": "CONTATO"
   }
 }

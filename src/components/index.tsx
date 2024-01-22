@@ -14,6 +14,7 @@ import Logo from './Logo'
 import ScrollTop from './ScrollTop'
 import Toast from './Toast'
 import ParticleBackground from './ParticleBackground'
+import Footer from './Footer'
 
 export {
   About,
@@ -32,4 +33,5 @@ export {
   ScrollTop,
   Toast,
   ParticleBackground,
+  Footer,
 }

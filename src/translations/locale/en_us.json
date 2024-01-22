@@ -72,5 +72,18 @@
     "submit": "Submit",
     "send-success-message": "Your message has been sent.",
     "send-error-message": "Something went wrong. Please try again."
+  },
+
+  "footer": {
+    "social-media": "SOCIAL MEDIA",
+    "sections": "SECTIONS",
+    "contact-info": "CONTACT INFO",
+    "lang": "LANGUAGE",
+    "Home": "HOME",
+    "About": "ABOUT",
+    "Skills": "SKILLS",
+    "Projects": "PROJECTS",
+    "Experience": "EXPERIENCE",
+    "Contact": "CONTACT"
   }
 }

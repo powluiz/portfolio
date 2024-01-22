@@ -9,6 +9,7 @@ function HomePage() {
       {/* <Projects /> */}
       <Experience />
       <Contact />
+      {/* <Footer /> */}
     </div>
   )
 }
