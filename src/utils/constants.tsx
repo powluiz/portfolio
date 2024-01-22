@@ -330,7 +330,7 @@ export const experienceList: IExperienceItem[] = [
     },
     period: {
       en_us: 'MAR 2023 - PRESENT',
-      pt_br: 'MAR 2023 - PRESENT',
+      pt_br: 'MAR 2023 - PRESENTE',
     },
     description: {
       en_us:
