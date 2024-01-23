@@ -6,9 +6,9 @@
   <a href="https://choosealicense.com/licenses/mit/">
     <img src="https://img.shields.io/badge/License-MIT-brightgreen?style=for-the-badge"/ >
   </a>
-  <img src="https://img.shields.io/github/repo-size/luiz1303/portfolio?style=for-the-badge" />
-  <!-- <img src="https://img.shields.io/github/stars/luiz1303/portfolio?style=for-the-badge" /> -->
-  <img src="https://img.shields.io/github/last-commit/luiz1303/portfolio?style=for-the-badge" />
+  <img src="https://img.shields.io/github/repo-size/powluiz/portfolio?style=for-the-badge" />
+  <!-- <img src="https://img.shields.io/github/stars/powluiz/portfolio?style=for-the-badge" /> -->
+  <img src="https://img.shields.io/github/last-commit/powluiz/portfolio?style=for-the-badge" />
 </div>
 
 <br>
@@ -52,7 +52,7 @@ A personal portfolio developed using **Vite** and hosted on **Vercel**. Within t
 To run and test locally this application, you'll need <a href="https://nodejs.org/en">Node.js</a>.
 
 ```bash
-git clone https://github.com/luiz1303/portfolio.git
+git clone https://github.com/powluiz/portfolio.git
 cd portfolio/
 ```
 
