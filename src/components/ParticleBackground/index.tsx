@@ -114,7 +114,7 @@ const ParticleBackground = ({
         x: event.clientX * window.devicePixelRatio,
         y: event.pageY * window.devicePixelRatio,
       })
-    }, 20)
+    }, 12)
 
     const handleResize = () => {
       const newWidth = window.innerWidth * window.devicePixelRatio
@@ -154,7 +154,10 @@ const ParticleBackground = ({
   }, [windowSize])
 
   useEffect(() => {
-    interactWithParticles()
+    const canvasHeight = canvasRef.current?.height
+    if (!!canvasHeight && mousePosition.y <= canvasHeight) {
+      interactWithParticles()
+    }
   }, [mousePosition])
 
   return <canvas ref={canvasRef} className={className} />
