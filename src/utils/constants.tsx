@@ -23,7 +23,13 @@ import {
   SiTypescript,
   SiVite,
 } from 'react-icons/si'
-import { FaCss3Alt, FaHtml5, FaPython, FaReact, FaWordpress } from 'react-icons/fa'
+import {
+  FaCss3Alt,
+  FaHtml5,
+  FaPython,
+  FaReact,
+  FaWordpress,
+} from 'react-icons/fa'
 import { BiLogoFigma, BiLogoPostgresql } from 'react-icons/bi'
 
 export const socialLinks = [
@@ -60,11 +66,11 @@ export const pageLinks = [
     label: 'About',
     to: '#section-about',
   },
-  // {
-  //   isInternal: true,
-  //   label: 'Projects',
-  //   to: '#section-projects',
-  // },
+  {
+    isInternal: true,
+    label: 'Projects',
+    to: '#section-projects',
+  },
   {
     isInternal: true,
     label: 'Experience',
@@ -412,6 +418,93 @@ export const experienceList: IExperienceItem[] = [
       'Adobe After Effects',
       'CorelDRAW',
     ],
+  },
+]
+export type IJobSkill = 'development' | 'design' | 'ux_design' | 'video_editing'
+
+export interface IJobItem {
+  name: IMultiLanguageText
+  description: IMultiLanguageText
+  imgSrc: string
+  link: string
+  skills?: IJobSkill[]
+}
+
+export const jobList: IJobItem[] = [
+  {
+    name: {
+      en_us: 'PNLD Training',
+      pt_br: 'PNLD Formação',
+    },
+    description: {
+      en_us:
+        'Component of the National Book and Didactic Material Program (PNLD), aimed at qualifying education professionals and management teams to promote quality learning.',
+      pt_br:
+        'Componente do Programa Nacional do Livro e do Material Didático (PNLD), destinado à qualificar os profissionais e equipes gestoras da educação para que promovam uma aprendizagem de qualidade.',
+    },
+    imgSrc: '',
+    link: '',
+    skills: ['development'],
+  },
+  {
+    name: {
+      en_us: 'Present Management',
+      pt_br: 'Gestão Presente',
+    },
+    description: {
+      en_us:
+        'Education hub developed to centralize the management of data and information on Basic Education in Brazil, containing data from more than 7 million students from public schools.',
+      pt_br:
+        'Hub de educação desenvolvido para centralizar a gestão de dados e informações da Educação Básica no Brasil, contendo dados de mais de 7 milhões de alunos de escolas públicas.',
+    },
+    imgSrc: '',
+    link: '',
+    skills: ['development'],
+  },
+  {
+    name: {
+      en_us: 'Treasure Map',
+      pt_br: 'Mapa do Tesouro',
+    },
+    description: {
+      en_us:
+        'Application designed for events, where participants are invited to explore booths using an interactive map. By scanning QR Codes hidden in the booths, users advance on their journey until they reach the final treasure location.',
+      pt_br:
+        'Aplicação projetada para eventos, em que os participantes são convidados a explorar os estandes usando um mapa interativo. Ao escanear QR Codes escondidos nos estandes, os usuários avançam em sua jornada até alcançar a localização do tesouro final.',
+    },
+    imgSrc: '',
+    link: '',
+    skills: ['development', 'ux_design'],
+  },
+  {
+    name: {
+      en_us: 'Portfolio',
+      pt_br: 'Portifólio',
+    },
+    description: {
+      en_us:
+        'My personal portfolio developed with React, Vite, TailwindCSS, Framer Motion, and hosted on Vercel.',
+      pt_br:
+        'Meu portifólio pessoal desenvolvido com React, Vite, TailwindCSS, Framer Motion e hospedado na Vercel.',
+    },
+    imgSrc: '',
+    link: '',
+    skills: ['development', 'ux_design'],
+  },
+  {
+    name: {
+      en_us: 'Stand',
+      pt_br: 'Stand',
+    },
+    description: {
+      en_us:
+        'Application prototype developed with the purpose of helping women in the fight against abuse and domestic violence.',
+      pt_br:
+        'Protótipo de aplicação desenvolvida com o intuito de auxiliar mulheres na luta contra o abuso e violência doméstica.',
+    },
+    imgSrc: '',
+    link: '',
+    skills: ['ux_design'],
   },
 ]
 

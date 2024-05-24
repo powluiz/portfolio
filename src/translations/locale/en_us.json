@@ -46,7 +46,8 @@
 
   "projects": {
     "Projects": "Projects",
-    "ProjectsText": "Check out some past projects I've worked on."
+    "ProjectsText": "Check out some past projects I've worked on.",
+    "SeeProject": "See project"
   },
 
   "experience": {

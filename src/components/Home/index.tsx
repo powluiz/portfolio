@@ -41,7 +41,7 @@ const Home = () => {
       repeat: -1,
     })
 
-    let ctx = gsap.context(() => {
+    const ctx = gsap.context(() => {
       tl.current
         .fromTo(
           '.anim-social-icon',
@@ -124,6 +124,7 @@ const Home = () => {
               href={link?.url}
               target="_blank"
               className="anim-social-icon hover:brightness-125"
+              rel="noreferrer"
             >
               {link?.icon}
             </a>

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import DotPattern from '@/assets/DotPattern'
 import useBreakpoint from '@/utils/hooks/useBreakpoint'
 import { useTranslation } from 'react-i18next'
@@ -56,7 +57,7 @@ const Skills = () => {
       },
     })
 
-    let ctx = gsap.context(() => {
+    const ctx = gsap.context(() => {
       tl.current
         .fromTo(
           '.anim-title',

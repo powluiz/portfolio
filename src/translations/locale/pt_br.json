@@ -46,7 +46,8 @@
 
   "projects": {
     "Projects": "Projetos",
-    "ProjectsText": "Confira alguns projetos que já trabalhei."
+    "ProjectsText": "Confira alguns projetos aos quais já contribuí:",
+    "SeeProject": "Veja o projeto"
   },
 
   "experience": {

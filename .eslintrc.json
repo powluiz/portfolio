@@ -1,0 +1,54 @@
+{
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:prettier/recommended",
+      "plugin:@typescript-eslint/recommended",
+      "plugin:react/jsx-runtime"
+    ],
+    "plugins": [
+      "prettier",
+      "react",
+      "react-hooks",
+      "@typescript-eslint"
+    ],
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "printWidth": 80,
+          "tabWidth": 2,
+          "singleQuote": true,
+          "trailingComma": "all",
+          "arrowParens": "avoid",
+          "semi": false,
+          "plugins": ["prettier-plugin-tailwindcss"]
+        }
+      ],
+      "@typescript-eslint/no-explicit-any": "warn",
+      "@typescript-eslint/no-unused-vars": "warn",
+      "no-unused-expressions": "warn",
+      "array-callback-return": "warn",
+      "no-empty": "warn",
+      "no-sequences": "warn",
+      "no-lone-blocks": "warn",
+      "react/jsx-key": "warn",
+      "no-async-promise-executor": "warn",
+      "no-useless-constructor": "warn",
+      "no-constant-condition": "warn",
+      "no-use-before-define": "warn",
+      "react-hooks/rules-of-hooks": "warn"
+    },
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true,
+      "jest": true
+    },
+    "ignorePatterns": [
+      "node_modules",
+      "build",
+      "dist",
+      "public"
+    ]
+  }
