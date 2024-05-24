@@ -5,25 +5,25 @@ import {
   SiAdobephotoshop,
   SiAdobepremierepro,
   SiBitbucket,
-  SiBulma,
   SiC,
   SiChakraui,
   SiCplusplus,
   SiGithub,
+  SiGitlab,
   SiInsomnia,
   SiJavascript,
   SiJirasoftware,
   SiNextdotjs,
   SiNodedotjs,
   SiOpencv,
+  SiPostman,
   SiStorybook,
   SiStyledcomponents,
   SiTailwindcss,
   SiTypescript,
-  SiUnity,
   SiVite,
 } from 'react-icons/si'
-import { FaCss3Alt, FaHtml5, FaPython, FaReact } from 'react-icons/fa'
+import { FaCss3Alt, FaHtml5, FaPython, FaReact, FaWordpress } from 'react-icons/fa'
 import { BiLogoFigma, BiLogoPostgresql } from 'react-icons/bi'
 
 export const socialLinks = [
@@ -113,6 +113,12 @@ export const toolList = [
     badgeColor: '#390091',
   },
   {
+    name: 'WordPress',
+    icon: <FaWordpress />,
+    textColor: '#fff',
+    badgeColor: '#0F8CC6',
+  },
+  {
     name: 'HTML5',
     icon: <FaHtml5 />,
     textColor: '#fff',
@@ -161,12 +167,6 @@ export const toolList = [
     badgeColor: '#38BDF8',
   },
   {
-    name: 'Bulma',
-    icon: <SiBulma />,
-    textColor: '#fff',
-    badgeColor: '#00D0B1',
-  },
-  {
     name: 'Storybook',
     icon: <SiStorybook />,
     textColor: '#fff',
@@ -209,22 +209,28 @@ export const toolList = [
     badgeColor: '#316192',
   },
   {
-    name: 'Unity',
-    icon: <SiUnity />,
-    textColor: '#fff',
-    badgeColor: '#100000',
-  },
-  {
     name: 'Insomnia',
     icon: <SiInsomnia />,
     textColor: '#fff',
     badgeColor: '#5849BE',
   },
   {
+    name: 'Postman',
+    icon: <SiPostman />,
+    textColor: '#fff',
+    badgeColor: '#FF6C37',
+  },
+  {
     name: 'GitHub',
     icon: <SiGithub />,
     textColor: '#fff',
     badgeColor: '#1F2328',
+  },
+  {
+    name: 'GitLab',
+    icon: <SiGitlab />,
+    textColor: '#fff',
+    badgeColor: '#E24329',
   },
   {
     name: 'BitBucket',
@@ -289,11 +295,11 @@ export const experienceList: IExperienceItem[] = [
   {
     company: {
       en_us: 'Center for Excellence in Social Technologies',
-      pt_br: 'Centro de Excelência em Tecnologias Sociais',
+      pt_br: 'Núcleo de Excelência em Tecnologias Sociais',
     },
     role: {
-      en_us: 'Frontend Web Developer',
-      pt_br: 'Desenvolvedor Web Front-End',
+      en_us: 'Frontend Developer',
+      pt_br: 'Desenvolvedor Front-End',
     },
     period: {
       en_us: 'NOV 2022 - PRESENT',
@@ -303,7 +309,7 @@ export const experienceList: IExperienceItem[] = [
       en_us:
         'I served as a Front-End Web Developer at the Center of Excellence in Social Technologies. I actively collaborated with the front-end team and engaged in cross-functional cooperation with other teams on various initiatives. Key responsibilities included: Developing and maintaining responsive interfaces using Figma prototypes, updating the Design System to DSGov standards, utilizing REST APIs to ensure seamless client-server integration, and implementing version control and code reviews through Bitbucket.',
       pt_br:
-        'Atuei como Desenvolvedor Web Front-End no Núcleo de Excelência em Tecnologias Sociais, onde integrei a equipe de front e colaborei com outros times em diversas atividades. Entre elas, destacam-se: Desenvolvimento e manutenção de interfaces responsivas com base em protótipos do Figma, atualização de Design System nos padrões do DSGov, consumo de APIs REST para garantir uma integração cliente-servidor efetiva, controle de versionamento e revisão de código com Bitbucket.',
+        'Atuação em dois projetos de impacto nacional: Sistema Gestão Presente e PNLD Formação. Decorrentes de parceria com o Ministério da Educação, ambos os projetos foram concebidos com o propósito de transformar o panorama da educação nacional. Com a atual participação de diversos times, esses projetos têm alcançado um crescimento notável, atingindo milhões indivíduos, sejam estudantes ou profissionais da educação.',
     },
     skills: [
       'React',
@@ -311,11 +317,12 @@ export const experienceList: IExperienceItem[] = [
       'Javascript',
       'Typescript',
       'Next.js',
-      'Chakra-UI',
+      'ChakraUI',
       'Storybook',
       'Figma',
       'Bitbucket',
-      'REST APIs',
+      'GitLab',
+      'Insomnia',
       'Jira Software',
     ],
   },
@@ -336,7 +343,7 @@ export const experienceList: IExperienceItem[] = [
       en_us:
         'I took on the role of leading, assigning tasks, and providing guidance to the marketing team. Additionally, I formulated strategies aligned with the goals of the junior company and collaborated with other departments to ensure an integrated approach. As a developer, I was responsible for crafting prototypes for web applications using Figma, developing Front-End applications, and ensuring seamless integration between the client and server.',
       pt_br:
-        'Fui responsável por liderar, atribuir tarefas e fornecer orientações ao time de marketing. Ainda, elaborei estratégias alinhadas aos objetivos da empresa júnior e trabalhei em colaboração aos outros setores para garantir uma abordagem integrada. Como desenvolvedor, fui responsável por criar protótipos de aplicações web com Figma, desenvolver aplicações Front-End e garantir a integração entre cliente e servidor.',
+        'Responsável por liderar, atribuir tarefas e fornecer orientações ao time de marketing. Ainda, elaborei estratégias alinhadas aos objetivos da empresa júnior e trabalhei em colaboração aos outros setores para garantir uma abordagem integrada. Como desenvolvedor, fui responsável por criar protótipos de interfaces e desenvolver o Front-End de aplicações.',
     },
     skills: [
       'Figma',
@@ -346,7 +353,6 @@ export const experienceList: IExperienceItem[] = [
       'Typescript',
       'Next.js',
       'GitHub',
-      'REST APIs',
       'Adobe Photoshop',
       'Adobe Illustrator',
       'Adobe Premiere Pro',
@@ -370,7 +376,7 @@ export const experienceList: IExperienceItem[] = [
       en_us:
         "I worked for a brief period as a marketing analyst at Bitz, where I was responsible for planning and producing materials used in the company's communication channels. This included creating organic marketing campaigns, developing Landing Pages, and overseeing the production of periodic live events.",
       pt_br:
-        'Atuei por um breve período como analista de marketing na Bitz, onde fui responsável por planejar e produzir os materiais utilizados nos canais de comunicação para as verticais da empresa, além de elaborar campanhas orgânicas de marketing, desenvolver landing pages e supervisionar lives periódicas.',
+        'Atuei como analista de marketing, período em que fui responsável por planejar e produzir os materiais utilizados nos canais de comunicação para as verticais da empresa, além de elaborar campanhas orgânicas de marketing, desenvolver landing pages e supervisionar lives periódicas.',
     },
     skills: [
       'RD Station',

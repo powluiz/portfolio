@@ -145,6 +145,7 @@ const Home = () => {
         <a className="anim-button" href="#section-contact">
           <Button
             className="with-border-anim mt-4 rounded-none px-8 py-4"
+            // className="with-border-anim mt-4 rounded-none px-8 py-4"
             onClick={() => {}}
           >
             <h3 className="with-border-content text-lg">{t('Get in touch')}</h3>

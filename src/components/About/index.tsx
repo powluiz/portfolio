@@ -93,9 +93,6 @@ const About = () => {
               className="h-full w-full rounded-full object-cover"
               alt="That's me!"
             />
-            <span className="tooltip top-[-2.5rem] w-fit text-nowrap rounded-full bg-neutral-black px-3 py-1 text-neutral-white shadow-lg">
-              {t('img_hover')}
-            </span>
           </div>
           <p className={textClassName}>{t('AboutText')}</p>
         </div>
