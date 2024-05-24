@@ -13,8 +13,8 @@
     "Front": "Desenvolvedor",
     "UX": "UX/UI Designer",
     "Designer": "Designer Gráfico",
-    "Editor": "Editor de Vídeo",
-    "catch_phrase": "Independentemente da função, meu trabalho é dar vida às ideias, criando experiências autênticas e memoráveis.",
+    "Editor": "Editor de Vídeos",
+    "catch_phrase": "Meu trabalho é dar vida à ideias, criando soluções autênticas e memoráveis.",
     "About me": "Sobre mim",
     "Get in touch": "Entre em contato"
   },
@@ -23,24 +23,24 @@
     "Skills": "Habilidades",
 
     "Development": "Programação",
-    "DevelopText": "Já desenvolvi diversos projetos utilizando tecnologias como Typescript e Node.js, mas sempre exploro novas opções para elevar meu trabalho a patamares mais elevados. Também já trabalhei em projetos acadêmicos/pessoais envolvendo programação embarcada e processamento de imagens.",
+    "DevelopText": "Já desenvolvi diversos projetos utilizando desde a base da web (HTML, CSS e Js) até o uso de ferramentas como React e React Native. Também já desenvolvi projetos acadêmicos de programação embarcada em C/C++ e de Machine Learning com Python.",
 
     "UX/UI Design": "UX/UI Design",
-    "UXDesignText": "Utilizo o Figma para projetar interfaces intuitivas e planejo Design Systems que representam o propósito do projeto. Além disso, sempre priorizo as necessidades do usuário ao passo em que busco uma experiência fluída e sem falhas.",
+    "UXDesignText": "Com foco sempre nas necessidades do usuário, acredito que um bom design é aquele que não apenas encanta, mas também traz resultados expressivos. Utilizando o Figma, crio interfaces que priorizam a intuitividade e refletem a identidade do projeto.",
 
     "Design": "Design Gráfico",
-    "DesignText": "Minha experiência em design gráfico gira em torno da criação de identidades visuais e materiais de marketing memoráveis. Dominando as principais ferramentas da Adobe Creative Cloud, minha dedicação transcende a estética: é sobre transmitir uma mensagem de maneira efetiva.",
+    "DesignText": "Minha experiência gira em torno da criação da criação de materiais memoráveis. Dominando as principais ferramentas da Adobe Creative Cloud, minha dedicação transcende a estética: é sobre transmitir uma mensagem de forma efetiva e impactante.",
 
     "Video Editing": "Edição de Vídeo",
-    "VideoEditText": "Como editor de vídeo e Motion Designer, meu trabalho envolve criar narrativas para transformar conceitos em histórias que prendem. Em cada projeto, busco tanto a excelência visual quanto emocional."
+    "VideoEditText": "Como editor de vídeos, já fui o responsável pela criação de narrativas para transformar conceitos em histórias que prendem. Em cada projeto, busco tanto a excelência visual quanto emocional em todas as etapas do processo de edição."
   },
 
   "about": {
     "About me": "Sobre mim",
-    "AboutText": "Sou o Luiz, desenvolvedor Web Front-End e estudante de Engenharia da Computação na Universidade Tecnológica Federal do Paraná. Apaixonado por design e tecnologia, dedico um tempo significativo para aprofundar e expandir meus conhecimentos nessas áreas. Descobri minha veia criativa desde cedo, quando comecei a atuar com design gráfico, edição e motion como freelancer. Desde então, vivo em constante processo de aperfeiçoamento para me tornar um profissional mais versátil.",
+    "AboutText": "Sou o Luiz, Desenvolvedor Front-End e estudante de Engenharia da Computação na Universidade Tecnológica Federal do Paraná. Apaixonado por design e tecnologia, dedico um tempo significativo para aprofundar e expandir meus conhecimentos nessas áreas. Descobri minha veia criativa desde cedo, quando comecei a atuar com design gráfico e edição como freelancer. Desde então, vivo em constante processo de aperfeiçoamento para me tornar um profissional mais versátil.",
 
     "Tools and Technologies": "Ferramentas e Tecnologias",
-    "ToolsText": "Gosto de explorar novas ferramentas e estou sempre em busca de me especializar em algo novo. Abaixo, você pode conferir algumas das tecnologias que já utilizei em projetos pessoais e profissionais.",
+    "ToolsText": "Gosto de explorar novas ferramentas e estou sempre em busca de me especializar em algo novo. Abaixo, você pode conferir algumas das tecnologias que já utilizei em projetos profissionais e acadêmicos.",
     "img_hover": "Esse sou eu!"
   },
 
