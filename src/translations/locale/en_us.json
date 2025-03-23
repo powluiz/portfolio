@@ -10,7 +10,7 @@
 
   "home": {
     "Hi, I'm Luiz:": "Hi! I'm Luiz:",
-    "Front": "Web Developer",
+    "Front": "Front-End Developer",
     "UX": "UX/UI Designer",
     "Designer": "Graphic Designer",
     "Editor": "Video Editor",
@@ -23,16 +23,16 @@
     "Skills": "Skills",
 
     "Development": "Development",
-    "DevelopText": "I have developed several projects using technologies such as TypeScript and Node.js, but I always explore new options to elevate my work to higher levels. I have also worked on academic/personal projects involving embedded programming and image processing.",
+    "DevelopText": "I've developed projects using various tech stacks: From web fundamentals (HTML, CSS, and JavaScript) to CMS platforms like WordPress and HubSpot, and modern technologies such as React, TypeScript, and Next.js. Additionally, I've worked on academic projects involving embedded programming in C/C++ and machine learning with Python and TensorFlow.",
 
     "UX/UI Design": "UX/UI Design",
-    "UXDesignText": "I use Figma to design intuitive interfaces and plan Design Systems that represent the project's purpose. Additionally, I always prioritize user needs while aiming for a smooth and seamless experience",
+    "UXDesignText": "With a focus always on user needs, I believe good design is not only visually striking but also delivers results. Using Figma, I create interfaces and user flows that prioritize usability and experience.",
 
     "Design": "Graphic Design",
-    "DesignText": "My experience in graphic design revolves around creating memorable visual identities and marketing materials. Mastering the key tools of Adobe Creative Cloud, my dedication goes beyond aesthetics: it's about effectively conveying a message.",
+    "DesignText": "Having mastered the primary tools of the Adobe Creative Cloud, I've been responsible for creating social media artwork and graphic materials for various companies.",
 
     "Video Editing": "Video Editing",
-    "VideoEditText": "As a video editor and motion designer, my work involves crafting narratives to turn concepts into captivating stories. In each project, I strive for both visual and emotional excellence."
+    "VideoEditText": "As an video editor, I've worked on crafting narratives to transform concepts into engaging stories, while also worked on motion design projects to create animations and promotional videos."
   },
 
   "about": {
