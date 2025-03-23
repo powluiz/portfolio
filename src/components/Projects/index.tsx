@@ -1,5 +1,7 @@
 import DotPattern from '@/assets/DotPattern'
 import { useTranslation } from 'react-i18next'
+import WorklistCarousel from '../WorklistCarousel'
+import { jobList } from '@/utils/constants'
 
 const Projects = () => {
   const { t } = useTranslation('projects')
@@ -14,6 +16,7 @@ const Projects = () => {
           <h2 className="text-center text-xl font-light text-neutral-white md:text-2xl">
             {t('ProjectsText')}
           </h2>
+          <WorklistCarousel items={jobList} />
         </div>
       </div>
       <DotPattern

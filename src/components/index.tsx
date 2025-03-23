@@ -9,6 +9,7 @@ import Projects from './Projects'
 import Experience from './Experience'
 import Contact from './Contact'
 import ToolList from './ToolList'
+import WorklistCarousel from './WorklistCarousel'
 import Badge from './Badge'
 import Logo from './Logo'
 import ScrollTop from './ScrollTop'
@@ -29,6 +30,7 @@ export {
   Icon,
   NavBar,
   ToolList,
+  WorklistCarousel,
   Logo,
   ScrollTop,
   Toast,

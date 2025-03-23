@@ -21,7 +21,7 @@ const NavBar = ({ showLangSelector = false }: INavbarProps) => {
       delay: 1,
     })
 
-    let ctx = gsap.context(() => {
+    const ctx = gsap.context(() => {
       tl.current
         .fromTo(
           '.anim-navlink',

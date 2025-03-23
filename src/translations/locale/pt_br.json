@@ -36,11 +36,9 @@
   },
 
   "about": {
-    "About me": "Sobre mim",
-    "AboutText": "Sou o Luiz, Desenvolvedor Front-End e estudante de Engenharia da Computação na Universidade Tecnológica Federal do Paraná. Apaixonado por design e tecnologia, dedico um tempo significativo para aprofundar e expandir meus conhecimentos nessas áreas. Descobri minha veia criativa desde cedo, quando comecei a atuar com design gráfico e edição como freelancer. Desde então, vivo em constante processo de aperfeiçoamento para me tornar um profissional mais versátil.",
-
+    "About me": "Quem sou eu?",
+    "AboutText": "Sou o Luiz, Prazer! Atuo como Desenvolvedor Front-End e durante minha experiência trabalhei em projetos de diferentes escopos, desde o desenvolvimento de websites com enfoque em SEO e performance até a manutenção de sistemas web complexos em ambientes de alta disponibilidade. Tenho uma veia criativa bem forte, que se evidenciou em minhas experiências prévias como designer e editor de vídeos. Como consequência, desenvolvi um olhar é crítico quando o assunto é usabilidade ou boas práticas de UX/UI em aplicações. Sou fascinado pelo universo da programação e sempre busco expandir minha bolha de conhecimentos, já tendo explorado desenvolvimento mobile, criação de jogos e machine learning com enfoque em visão computacional. Confira algumas das tecnologias que já utilizei em projetos anteriores:",
     "Tools and Technologies": "Ferramentas e Tecnologias",
-    "ToolsText": "Gosto de explorar novas ferramentas e estou sempre em busca de me especializar em algo novo. Abaixo, você pode conferir algumas das tecnologias que já utilizei em projetos profissionais e acadêmicos.",
     "img_hover": "Esse sou eu!"
   },
 
@@ -51,8 +49,7 @@
   },
 
   "experience": {
-    "Experience": "Experiência",
-    "ExperienceText": "Role para ver experiências anteriores."
+    "Experience": "Experiência"
   },
 
   "contact": {

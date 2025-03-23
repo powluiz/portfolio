@@ -31,7 +31,7 @@ const Experience = () => {
       },
     })
 
-    let ctx = gsap.context(() => {
+    const ctx = gsap.context(() => {
       tl.current.fromTo(
         '.anim-title',
         { y: 32, opacity: 0 },
@@ -58,9 +58,6 @@ const Experience = () => {
           <h1 className="anim-title text-center text-[2.5rem] font-extrabold text-neutral-white sm:text-4xl md:text-5xl">
             {t('Experience')}
           </h1>
-          <h2 className="anim-title text-center text-xl font-light text-neutral-white md:text-2xl">
-            {t('ExperienceText')}
-          </h2>
           <div className="relative mt-9 flex flex-col gap-16 pb-14">
             {experienceList?.map((experience, index) => (
               <TimelineItem

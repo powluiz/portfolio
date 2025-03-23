@@ -37,10 +37,9 @@
 
   "about": {
     "About me": "About me",
-    "AboutText": "I'm Luiz, a Front-End Web developer and Computer Engineering student at the Federal Technological University of Paraná. Passionate about design and technology, I invest a substantial amount of time to delve deeper and broaden my knowledge in these fields. I discovered my creative side early on when I began freelancing in graphic design, editing, and motion. Since then, I've been on a continuous journey of improvement, striving to become a more versatile professional.",
+    "AboutText": "I'm Luiz, nice to meet you! I work as a Front-End Developer, and during my career, I've developed projects of diverse scopes: From building SEO-optimized websites focused on performance to maintaining complex web systems in high-availability environments. My strong creative streak, honed through prior roles as a designer and video editor, has sharpened my critical eye for usability and UX/UI best practices in applications. I'm passionate about programming and continually seek to expand my knowledge, having explored mobile development, game creation, and machine learning with a focus on computer vision. Below are some technologies I've used in previous projects:",
 
     "Tools and Technologies": "Tools and Technologies",
-    "ToolsText": "I enjoy exploring new tools and I'm always seeking to specialize in something new. Below, you can check out some of the technologies I have already used in personal and professional projects.",
     "img_hover": "Yep, That's me!"
   },
 
@@ -51,8 +50,7 @@
   },
 
   "experience": {
-    "Experience": "Experience",
-    "ExperienceText": "Scroll to see past experiences."
+    "Experience": "Experience"
   },
 
   "contact": {

@@ -1,11 +1,6 @@
 import { InstagramIcon, GithubIcon, LinkedinIcon } from '@/assets/SocialIcons'
 import {
-  SiAdobeaftereffects,
-  SiAdobeillustrator,
-  SiAdobephotoshop,
-  SiAdobepremierepro,
   SiBitbucket,
-  SiC,
   SiChakraui,
   SiCplusplus,
   SiGithub,
@@ -17,17 +12,19 @@ import {
   SiNodedotjs,
   SiOpencv,
   SiPostman,
+  SiRedux,
   SiStorybook,
-  SiStyledcomponents,
   SiTailwindcss,
   SiTypescript,
   SiVite,
 } from 'react-icons/si'
 import {
   FaCss3Alt,
+  FaDocker,
   FaHtml5,
   FaPython,
   FaReact,
+  FaSass,
   FaWordpress,
 } from 'react-icons/fa'
 import { BiLogoFigma, BiLogoPostgresql } from 'react-icons/bi'
@@ -107,13 +104,7 @@ import { FaBeer } from 'react-icons/fa'
 
 export const toolList = [
   {
-    name: 'C',
-    icon: <SiC />,
-    textColor: '#fff',
-    badgeColor: '#00599D',
-  },
-  {
-    name: 'C++',
+    name: 'C/C++',
     icon: <SiCplusplus />,
     textColor: '#fff',
     badgeColor: '#390091',
@@ -149,16 +140,22 @@ export const toolList = [
     badgeColor: '#007ACC',
   },
   {
-    name: 'React',
+    name: 'React/ React Native',
     icon: <FaReact />,
     textColor: '#fff',
     badgeColor: '#087EA4',
   },
   {
-    name: 'Styled-Components',
-    icon: <SiStyledcomponents />,
+    name: 'Redux',
+    icon: <SiRedux />,
     textColor: '#fff',
-    badgeColor: '#BF4F74',
+    badgeColor: '#764ABC',
+  },
+  {
+    name: 'Sass',
+    icon: <FaSass />,
+    textColor: '#fff',
+    badgeColor: '#c69',
   },
   {
     name: 'Chakra-UI',
@@ -215,6 +212,12 @@ export const toolList = [
     badgeColor: '#316192',
   },
   {
+    name: 'Docker',
+    icon: <FaDocker />,
+    textColor: '#fff',
+    badgeColor: '#0db7ed',
+  },
+  {
     name: 'Insomnia',
     icon: <SiInsomnia />,
     textColor: '#fff',
@@ -256,30 +259,6 @@ export const toolList = [
     textColor: '#fff',
     badgeColor: '#FF3361',
   },
-  {
-    name: 'Adobe Photoshop',
-    icon: <SiAdobephotoshop />,
-    textColor: '#fff',
-    badgeColor: '#006ACC',
-  },
-  {
-    name: 'Adobe Illustrator',
-    icon: <SiAdobeillustrator />,
-    textColor: '#fff',
-    badgeColor: '#FF8A00',
-  },
-  {
-    name: 'Adobe Premiere Pro',
-    icon: <SiAdobepremierepro />,
-    textColor: '#fff',
-    badgeColor: '#5545FF',
-  },
-  {
-    name: 'Adobe After Effects',
-    icon: <SiAdobeaftereffects />,
-    textColor: '#fff',
-    badgeColor: '#9969FF',
-  },
 ]
 
 /* ****************************************************** */
@@ -300,8 +279,8 @@ export interface IExperienceItem {
 export const experienceList: IExperienceItem[] = [
   {
     company: {
-      en_us: 'Center for Excellence in Social Technologies',
-      pt_br: 'Núcleo de Excelência em Tecnologias Sociais',
+      en_us: 'Center for Excellence in Social Technologies (NEES)',
+      pt_br: 'Núcleo de Excelência em Tecnologias Sociais (NEES)',
     },
     role: {
       en_us: 'Frontend Developer',
@@ -313,84 +292,65 @@ export const experienceList: IExperienceItem[] = [
     },
     description: {
       en_us:
-        'I served as a Front-End Web Developer at the Center of Excellence in Social Technologies. I actively collaborated with the front-end team and engaged in cross-functional cooperation with other teams on various initiatives. Key responsibilities included: Developing and maintaining responsive interfaces using Figma prototypes, updating the Design System to DSGov standards, utilizing REST APIs to ensure seamless client-server integration, and implementing version control and code reviews through Bitbucket.',
+        'Experience in projects derived from partnerships between NEES and the Brazilian Ministry of Education, designed to improve the national education, impacting thousands of students and education professionals. Key responsibilities included maintaining a Design System used by multiple teams, implementing new modules and functionalities, fixing bugs and optimizing security, performance, and accessibility.',
       pt_br:
-        'Atuação em dois projetos de impacto nacional: Sistema Gestão Presente e PNLD Formação. Decorrentes de parceria com o Ministério da Educação, ambos os projetos foram concebidos com o propósito de transformar o panorama da educação nacional. Com a atual participação de diversos times, esses projetos têm alcançado um crescimento notável, atingindo milhões indivíduos, sejam estudantes ou profissionais da educação.',
+        'Atuação em diferentes projetos decorrentes de parceria entre NEES e Ministério da Educação, concebidos com o propósito de melhorar o panorama da educação em nível nacional e que têm atingido milhares de estudantes e profissionais da educação. Atribuições principais: Manutenção de Design System utilizada por diferentes times, implementação de novos módulos e funcionalidades, correção de bugs e otimizações de segurança, performance e acessibilidade.',
     },
     skills: [
       'React',
-      'Node.js',
       'Javascript',
       'Typescript',
       'Next.js',
-      'ChakraUI',
+      'Chakra UI',
       'Storybook',
       'Figma',
       'Bitbucket',
       'GitLab',
-      'Insomnia',
-      'Jira Software',
+      'Postman',
+      'Jira',
     ],
   },
   {
     company: {
-      en_us: 'OCCAM Engineering - Junior Company',
-      pt_br: 'OCCAM Engenharia - Empresa Júnior',
+      en_us: 'Aconcaia',
+      pt_br: 'Aconcaia',
     },
     role: {
-      en_us: 'Marketing Director/Developer',
-      pt_br: 'Diretor de Marketing/Desenvolvedor',
+      en_us: 'Web Developer',
+      pt_br: 'Desenvolvedor Web',
     },
     period: {
-      en_us: 'MAR 2023 - PRESENT',
-      pt_br: 'MAR 2023 - PRESENTE',
+      en_us: 'APR 2024 - SEP 2024',
+      pt_br: 'ABR 2024 - SET 2024',
     },
     description: {
       en_us:
-        'I took on the role of leading, assigning tasks, and providing guidance to the marketing team. Additionally, I formulated strategies aligned with the goals of the junior company and collaborated with other departments to ensure an integrated approach. As a developer, I was responsible for crafting prototypes for web applications using Figma, developing Front-End applications, and ensuring seamless integration between the client and server.',
+        'Experience at Aconcaia, a B2B agency focused on process optimization to increase conversions and improve sales team efficiency. During this period, I was responsible for developing SEO-optimized websites and templates with a focus on performance',
       pt_br:
-        'Responsável por liderar, atribuir tarefas e fornecer orientações ao time de marketing. Ainda, elaborei estratégias alinhadas aos objetivos da empresa júnior e trabalhei em colaboração aos outros setores para garantir uma abordagem integrada. Como desenvolvedor, fui responsável por criar protótipos de interfaces e desenvolver o Front-End de aplicações.',
+        'Atuação na Aconcaia, agência B2B com enfoque na otimização de processos para aumentar conversões e melhorar a eficiência de equipes de vendas. Durante este período, fui responsável pelo desenvolvimento de websites e templates com foco em SEO e performance',
     },
-    skills: [
-      'Figma',
-      'React',
-      'Node.js',
-      'Javascript',
-      'Typescript',
-      'Next.js',
-      'GitHub',
-      'Adobe Photoshop',
-      'Adobe Illustrator',
-      'Adobe Premiere Pro',
-      'Adobe After Effects',
-    ],
+    skills: ['HTML', 'CSS', 'Javascript/JQuery', 'PHP', 'WordPress', 'HubL'],
   },
   {
     company: {
-      en_us: 'Bitz Softwares',
-      pt_br: 'Bitz Softwares',
+      en_us: 'OCCAM Engineering',
+      pt_br: 'OCCAM Engenharia',
     },
     role: {
-      en_us: 'Marketing Analist',
-      pt_br: 'Analista de Marketing',
+      en_us: 'Junior Developer',
+      pt_br: 'Desenvolvedor Júnior',
     },
     period: {
-      en_us: 'FEV 2022 - MAR 2022',
-      pt_br: 'FEV 2022 - MAR 2022',
+      en_us: 'SEP 2022 - MAR 2024',
+      pt_br: 'SET 2022 - MAR 2024',
     },
     description: {
       en_us:
-        "I worked for a brief period as a marketing analyst at Bitz, where I was responsible for planning and producing materials used in the company's communication channels. This included creating organic marketing campaigns, developing Landing Pages, and overseeing the production of periodic live events.",
+        'Key Responsibilities: Collaborate with clients to define project objectives and requirements, design interface prototypes using Figma, and develop web applications with development team, ensuring solutions align with client expectations and needs.',
       pt_br:
-        'Atuei como analista de marketing, período em que fui responsável por planejar e produzir os materiais utilizados nos canais de comunicação para as verticais da empresa, além de elaborar campanhas orgânicas de marketing, desenvolver landing pages e supervisionar lives periódicas.',
+        'Atribuições: Entrar em contato com clientes para definir escopos e requisitos, criar protótipos de interfaces com Figma e desenvolver aplicações web em colaboração com a equipe, garantindo alinhamento entre necessidades dos clientes e soluções propostas.',
     },
-    skills: [
-      'RD Station',
-      'Adobe Photoshop',
-      'Adobe Illustrator',
-      'Adobe Premiere Pro',
-      'Adobe After Effects',
-    ],
+    skills: ['Figma', 'React', 'Javascript', 'Typescript', 'Next.js', 'GitHub'],
   },
   {
     company: {
@@ -409,7 +369,7 @@ export const experienceList: IExperienceItem[] = [
       en_us:
         'I started my career as a freelancer in projects involving design, editing, and motion. During this period, I was responsible for producing graphic materials and audiovisual solutions for products, events, and advertising campaigns.',
       pt_br:
-        'Iniciei minha carreira como freelancer em projetos com design, edição e motion. Durante este período, fui responsável pela produção de materiais gráficos e soluções audiovisuais para diversos produtos, eventos e campanhas publicitárias.',
+        'Iniciei minha carreira como freelancer em projetos com design, edição e motion design. Durante este período, fui responsável pela produção de materiais gráficos e soluções audiovisuais para diversos produtos, eventos e campanhas publicitárias.',
     },
     skills: [
       'Adobe Photoshop',

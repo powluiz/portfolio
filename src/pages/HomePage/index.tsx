@@ -1,4 +1,12 @@
-import { About, Contact, Experience, Home, Skills } from '@/components'
+import {
+  About,
+  Contact,
+  Experience,
+  Footer,
+  Home,
+  Projects,
+  Skills,
+} from '@/components'
 
 function HomePage() {
   return (
